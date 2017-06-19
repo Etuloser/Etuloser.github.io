@@ -6,48 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Maven | E</title>
+  <title>对象的多态性 | E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#安装及配置
+  <meta name="description" content="向上转型：父类 父类对象 = 子类实例
+向下转型：子类 子类对象 = (子类)父类实例//即要强转类型
 
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
-
-
-在IDEA设置maven相关配置">
+示例：
+定义父类Father
+123456public class Father &amp;#123;    public void say() &amp;#123;        System.out.println(&quot;我是父类的say方法&quot;);    &amp;#125;&amp;#125;
+定义子类Son1
+1234">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maven">
-<meta property="og:url" content="//etuloser.com/2017/06/13/Maven/index.html">
+<meta property="og:title" content="对象的多态性">
+<meta property="og:url" content="//etuloser.com/2017/06/19/对象的多态性/index.html">
 <meta property="og:site_name" content="E">
-<meta property="og:description" content="#安装及配置
+<meta property="og:description" content="向上转型：父类 父类对象 = 子类实例
+向下转型：子类 子类对象 = (子类)父类实例//即要强转类型
 
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
-
-
-在IDEA设置maven相关配置">
-<meta property="og:updated_time" content="2017-06-13T06:09:32.670Z">
+示例：
+定义父类Father
+123456public class Father &amp;#123;    public void say() &amp;#123;        System.out.println(&quot;我是父类的say方法&quot;);    &amp;#125;&amp;#125;
+定义子类Son1
+1234">
+<meta property="og:updated_time" content="2017-06-19T03:20:41.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven">
-<meta name="twitter:description" content="#安装及配置
+<meta name="twitter:title" content="对象的多态性">
+<meta name="twitter:description" content="向上转型：父类 父类对象 = 子类实例
+向下转型：子类 子类对象 = (子类)父类实例//即要强转类型
 
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
-
-
-在IDEA设置maven相关配置">
+示例：
+定义父类Father
+123456public class Father &amp;#123;    public void say() &amp;#123;        System.out.println(&quot;我是父类的say方法&quot;);    &amp;#125;&amp;#125;
+定义子类Son1
+1234">
   
   
     <link rel="icon" href="/assets/blogImg/favicon.png">
@@ -167,49 +158,54 @@ https://maven.apache.org
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Maven" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-对象的多态性" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Maven
+      对象的多态性
     </h1>
   
 
         
-        <a href="/2017/06/13/Maven/" class="archive-article-date">
-  	<time datetime="2017-06-13T05:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-13</time>
+        <a href="/2017/06/19/对象的多态性/" class="archive-article-date">
+  	<time datetime="2017-06-19T03:20:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#安装及配置</p>
-<ol>
-<li><a href="https://maven.apache.org" title="maven" target="_blank" rel="external">https://maven.apache.org</a></li>
-<li>配置环境变量<code>M2_HOME</code>并添加到path</li>
-<li><p>配置settings.xml</p>
-<ul>
-<li><code>&lt;localRepository&gt;本地仓库&lt;/localRepository&gt;</code></li>
-<li><code>&lt;mirrors&gt;阿里云&lt;/mirrors&gt;</code></li>
-</ul>
-</li>
-<li><p>在IDEA设置maven相关配置</p>
-</li>
-</ol>
-<a id="more"></a>
+        <blockquote>
+<p>向上转型：父类 父类对象 = 子类实例</p>
+<p>向下转型：子类 子类对象 = (子类)父类实例//即要强转类型</p>
+</blockquote>
+<p>示例：</p>
+<p>定义父类Father</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Father</span> &#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        System.<span class="keyword">out</span>.println(<span class="string">"我是父类的say方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>定义子类Son1</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Son1</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;</div><div class="line"></div><div class="line">    public void say() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son1类的say方法"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void tell() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son1类的tell方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>定义子类Son2</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Son2</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;</div><div class="line"></div><div class="line">    public void say() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son2类的say方法"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void tell() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son2类的tell方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>向上转型</p>
+<figure class="highlight pony"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="type">Father</span> father = <span class="function"><span class="keyword">new</span> <span class="title">Son1</span>();</span></div><div class="line"><span class="title">father</span>.<span class="title">say</span>()<span class="comment">//此处调用的是子类覆写过的say方法</span></div><div class="line"><span class="title">father</span>.<span class="title">tell</span>()<span class="comment">//报错，因为父类中没有tell方法</span></div></pre></td></tr></table></figure>
+<p><em>发生向上转型后，调用的一定是子类中的被覆写的方法</em></p>
+<p>向下转型</p>
+<figure class="highlight pony"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="type">Father</span> father = <span class="function"><span class="keyword">new</span> <span class="title">Son1</span>()；</span></div><div class="line"><span class="title">Son1</span> <span class="title">son</span> = (<span class="type">Son1</span>)<span class="title">father</span>;</div><div class="line"><span class="title">son</span>.<span class="title">say</span>();</div><div class="line"><span class="title">son</span>.<span class="title">tell</span>();<span class="comment">//均可使用</span></div></pre></td></tr></table></figure>
+<p><em>值得注意的是，要向使用向下转型，必须先向上转型让子类与父类建立联系，否则会出现ClassCastException错误</em></p>
 <hr>
-<p>pom.xml配置：</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">1</span><span class="string">.</span><span class="comment">http://mvnrepository</span><span class="string">.</span><span class="comment">com/</span></div><div class="line"></div><div class="line"><span class="comment">2</span><span class="string">.</span>&lt;<span class="comment">dependencies</span>&gt;&lt;<span class="comment">/dependencies</span>&gt;</div><div class="line"></div><div class="line"><span class="comment">3</span><span class="string">.</span><span class="comment">项目</span><span class="literal">-</span><span class="literal">-</span><span class="comment">右键</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Maven</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Reimport</span></div></pre></td></tr></table></figure>
+<p>应用场景：设计一个方法，要求此方法可以接受Father类的子类并调用相应放方法</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public void <span class="function"><span class="keyword">fun</span>(<span class="title">Father</span></span> father)&#123;</div><div class="line">	father.say();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果不使用向上转型，则需要给每个子类添加一个对应的fun(子类 参数名)方法，这显然不合理。</p>
 <hr>
-<p>Tomcat设置：</p>
-<p>1.添加Tomcat后到Deployment选择卡下把包放到lib下</p>
-<p>2.在Server选择卡管理自动调起浏览器，改变Update方式</p>
-<hr>
-<p>头文件<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span> <span class="meta">?&gt;</span></span>   </div><div class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span>  </span></div><div class="line"><span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> </div><div class="line">   <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span>  </div><div class="line">   <span class="attr">xsi:schemaLocat</span></div></pre></td></tr></table></figure></p>
+<p>#instanceof 关键字</p>
+<blockquote>
+<p>用来判断一个对象到底是哪个类的实例</p>
+</blockquote>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Father father = <span class="keyword">new</span> Son1();</div><div class="line">System.out.<span class="keyword">println</span>(father <span class="keyword">instanceof</span> Father);<span class="comment">//t</span></div><div class="line">System.out.<span class="keyword">println</span>(father <span class="keyword">instanceof</span> Son1);<span class="comment">//t</span></div><div class="line">System.out.<span class="keyword">println</span>(father <span class="keyword">instanceof</span> Son2);<span class="comment">//f</span></div></pre></td></tr></table></figure>
+<p>在进行对象向下转型关系前最好先进行判断再进行相应的转型操作</p>
 
       
 
@@ -218,17 +214,6 @@ https://maven.apache.org
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -279,7 +264,7 @@ https://maven.apache.org
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/13/Maven/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/19/对象的多态性/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,18 +278,18 @@ https://maven.apache.org
   
 <nav id="article-nav">
   
-    <a href="/2017/06/13/Pattern和Matcher/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/19/final关键字/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Pattern和Matcher
+          final关键字
         
       </div>
     </a>
   
   
-    <a href="/2017/06/13/软件测试/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">软件测试</div>
+    <a href="/2017/06/19/entity/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">entity</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -6,48 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Maven | E</title>
+  <title>E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#安装及配置
-
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
-
-
-在IDEA设置maven相关配置">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Maven">
-<meta property="og:url" content="//etuloser.com/2017/06/13/Maven/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="E">
+<meta property="og:url" content="//etuloser.com/page/2/index.html">
 <meta property="og:site_name" content="E">
-<meta property="og:description" content="#安装及配置
-
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
-
-
-在IDEA设置maven相关配置">
-<meta property="og:updated_time" content="2017-06-13T06:09:32.670Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven">
-<meta name="twitter:description" content="#安装及配置
-
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
-
-
-在IDEA设置maven相关配置">
+<meta name="twitter:title" content="E">
   
   
     <link rel="icon" href="/assets/blogImg/favicon.png">
@@ -167,49 +133,41 @@ https://maven.apache.org
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Maven" class="article article-type-post " itemscope itemprop="blogPost">
+            
+  
+    <article id="post-swapValue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      Maven
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/22/swapValue/">不使用中间变量，交换a、b的值</a>
     </h1>
   
 
         
-        <a href="/2017/06/13/Maven/" class="archive-article-date">
-  	<time datetime="2017-06-13T05:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-13</time>
+        <a href="/2017/02/22/swapValue/" class="archive-article-date">
+  	<time datetime="2017-02-22T10:50:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#安装及配置</p>
+        <p><strong>一个经典的算法题</strong></p>
+<p>实现方法有三种：加减法、异或法、乘除法。</p>
 <ol>
-<li><a href="https://maven.apache.org" title="maven" target="_blank" rel="external">https://maven.apache.org</a></li>
-<li>配置环境变量<code>M2_HOME</code>并添加到path</li>
-<li><p>配置settings.xml</p>
-<ul>
-<li><code>&lt;localRepository&gt;本地仓库&lt;/localRepository&gt;</code></li>
-<li><code>&lt;mirrors&gt;阿里云&lt;/mirrors&gt;</code></li>
-</ul>
+<li><p>加减法：该方法可以交换整型和浮点型数值的变量，<strong>但在处理浮点型的时候有可能出现精度的损失。</strong></p>
+ <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">a</span> = a + b;</div><div class="line"><span class="attribute">b</span> = a - b;</div><div class="line"><span class="attribute">a</span> = a - b;</div></pre></td></tr></table></figure>
 </li>
-<li><p>在IDEA设置maven相关配置</p>
+<li><p>异或法：可以完成对整型变量的交换，<strong>对于浮点型变量它无法完成交换。</strong> </p>
+  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">a</span> = a ^ b;</div><div class="line"><span class="attribute">b</span> = a ^ b;</div><div class="line"><span class="attribute">a</span> = a ^ b;</div></pre></td></tr></table></figure>
+</li>
+<li><p>乘除法：可以处理整型和浮点型变量，但在处理浮点型变量时也存在精度损失问题。而且乘除法比加减法要多一条约束：<strong>b必不为0。</strong></p>
+ <figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">a</span> = a * b</div><div class="line"><span class="attr">b</span> = a / b</div><div class="line"><span class="attr">a</span> = a / b</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<a id="more"></a>
-<hr>
-<p>pom.xml配置：</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">1</span><span class="string">.</span><span class="comment">http://mvnrepository</span><span class="string">.</span><span class="comment">com/</span></div><div class="line"></div><div class="line"><span class="comment">2</span><span class="string">.</span>&lt;<span class="comment">dependencies</span>&gt;&lt;<span class="comment">/dependencies</span>&gt;</div><div class="line"></div><div class="line"><span class="comment">3</span><span class="string">.</span><span class="comment">项目</span><span class="literal">-</span><span class="literal">-</span><span class="comment">右键</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Maven</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Reimport</span></div></pre></td></tr></table></figure>
-<hr>
-<p>Tomcat设置：</p>
-<p>1.添加Tomcat后到Deployment选择卡下把包放到lib下</p>
-<p>2.在Server选择卡管理自动调起浏览器，改变Update方式</p>
-<hr>
-<p>头文件<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span> <span class="meta">?&gt;</span></span>   </div><div class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span>  </span></div><div class="line"><span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> </div><div class="line">   <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span>  </div><div class="line">   <span class="attr">xsi:schemaLocat</span></div></pre></td></tr></table></figure></p>
 
       
 
@@ -223,7 +181,7 @@ https://maven.apache.org
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
         		</li>
       		
 		</ul>
@@ -232,83 +190,85 @@ https://maven.apache.org
       
 
       
-
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/22/swapValue/">展开全文 >></a>
+        </p>
       
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/13/Maven/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
+
+
+
+
   
-<nav id="article-nav">
-  
-    <a href="/2017/06/13/Pattern和Matcher/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
+    <article id="post-about-this-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
         
-          Pattern和Matcher
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/22/about-this-blog/">关于本博客</a>
+    </h1>
+  
+
         
-      </div>
-    </a>
-  
-  
-    <a href="/2017/06/13/软件测试/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">软件测试</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
+        <a href="/2017/02/22/about-this-blog/" class="archive-article-date">
+  	<time datetime="2017-02-22T02:21:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>本博客使用<strong>hexo</strong>搭建，部署在<strong>github page</strong>上，域名注册于<strong>godaddy</strong>，至于搭建方法，前辈们已经总结了很多详细的资料，在此不再赘述。</p>
+<hr>
+<p><strong>hexo常用命令</strong></p>
+<ul>
+<li>hexo g    //静态部署</li>
+<li>hexo d    //部署到githubpage</li>
+<li>hexo clean    //清静态部署</li>
+<li>hexo s    //运行服务器</li>
+<li>hexo n “文章名”    //新建文章</li>
+<li><code>&lt;!--more--&gt;</code>    //文章缩略</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">文档</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/22/about-this-blog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
 
 
 
@@ -316,10 +276,9 @@ https://maven.apache.org
 
   
   
-  
-
-  
-
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -342,8 +301,8 @@ https://maven.apache.org
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: false,
-		isPost: true,
+		isHome: true,
+		isPost: false,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

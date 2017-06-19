@@ -6,48 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Maven | E</title>
+  <title>entity | E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#安装及配置
-
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
-
-
-在IDEA设置maven相关配置">
+  <meta name="description" content="在日常的Java项目开发中，entity（实体类）是必不可少的，它们一般都有很多的属性，并有相应的setter和getter方法。entity（实体类）的作用一般是和数据表做映射。所以快速写出规范的entity（实体类）是java开发中一项必不可少的技能。
+在项目中写实体类一般遵循下面的规范：
+1、根据你的设计，定义一组你需要的私有属性。
+2、根据这些属性，创建它们的setter和getter方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maven">
-<meta property="og:url" content="//etuloser.com/2017/06/13/Maven/index.html">
+<meta property="og:title" content="entity">
+<meta property="og:url" content="//etuloser.com/2017/06/19/entity/index.html">
 <meta property="og:site_name" content="E">
-<meta property="og:description" content="#安装及配置
-
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
-
-
-在IDEA设置maven相关配置">
-<meta property="og:updated_time" content="2017-06-13T06:09:32.670Z">
+<meta property="og:description" content="在日常的Java项目开发中，entity（实体类）是必不可少的，它们一般都有很多的属性，并有相应的setter和getter方法。entity（实体类）的作用一般是和数据表做映射。所以快速写出规范的entity（实体类）是java开发中一项必不可少的技能。
+在项目中写实体类一般遵循下面的规范：
+1、根据你的设计，定义一组你需要的私有属性。
+2、根据这些属性，创建它们的setter和getter方法">
+<meta property="og:updated_time" content="2017-06-19T03:19:03.341Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven">
-<meta name="twitter:description" content="#安装及配置
-
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
-
-
-在IDEA设置maven相关配置">
+<meta name="twitter:title" content="entity">
+<meta name="twitter:description" content="在日常的Java项目开发中，entity（实体类）是必不可少的，它们一般都有很多的属性，并有相应的setter和getter方法。entity（实体类）的作用一般是和数据表做映射。所以快速写出规范的entity（实体类）是java开发中一项必不可少的技能。
+在项目中写实体类一般遵循下面的规范：
+1、根据你的设计，定义一组你需要的私有属性。
+2、根据这些属性，创建它们的setter和getter方法">
   
   
     <link rel="icon" href="/assets/blogImg/favicon.png">
@@ -167,50 +146,35 @@ https://maven.apache.org
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Maven" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-entity" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Maven
+      entity
     </h1>
   
 
         
-        <a href="/2017/06/13/Maven/" class="archive-article-date">
-  	<time datetime="2017-06-13T05:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-13</time>
+        <a href="/2017/06/19/entity/" class="archive-article-date">
+  	<time datetime="2017-06-19T03:18:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#安装及配置</p>
-<ol>
-<li><a href="https://maven.apache.org" title="maven" target="_blank" rel="external">https://maven.apache.org</a></li>
-<li>配置环境变量<code>M2_HOME</code>并添加到path</li>
-<li><p>配置settings.xml</p>
-<ul>
-<li><code>&lt;localRepository&gt;本地仓库&lt;/localRepository&gt;</code></li>
-<li><code>&lt;mirrors&gt;阿里云&lt;/mirrors&gt;</code></li>
-</ul>
-</li>
-<li><p>在IDEA设置maven相关配置</p>
-</li>
-</ol>
-<a id="more"></a>
-<hr>
-<p>pom.xml配置：</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">1</span><span class="string">.</span><span class="comment">http://mvnrepository</span><span class="string">.</span><span class="comment">com/</span></div><div class="line"></div><div class="line"><span class="comment">2</span><span class="string">.</span>&lt;<span class="comment">dependencies</span>&gt;&lt;<span class="comment">/dependencies</span>&gt;</div><div class="line"></div><div class="line"><span class="comment">3</span><span class="string">.</span><span class="comment">项目</span><span class="literal">-</span><span class="literal">-</span><span class="comment">右键</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Maven</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Reimport</span></div></pre></td></tr></table></figure>
-<hr>
-<p>Tomcat设置：</p>
-<p>1.添加Tomcat后到Deployment选择卡下把包放到lib下</p>
-<p>2.在Server选择卡管理自动调起浏览器，改变Update方式</p>
-<hr>
-<p>头文件<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span> <span class="meta">?&gt;</span></span>   </div><div class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span>  </span></div><div class="line"><span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> </div><div class="line">   <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span>  </div><div class="line">   <span class="attr">xsi:schemaLocat</span></div></pre></td></tr></table></figure></p>
-
+        <p>在日常的Java项目开发中，entity（实体类）是必不可少的，它们一般都有很多的属性，并有相应的setter和getter方法。entity（实体类）的作用一般是和数据表做映射。所以快速写出规范的entity（实体类）是java开发中一项必不可少的技能。</p>
+<p>在项目中写实体类一般遵循下面的规范：</p>
+<p>1、根据你的设计，定义一组你需要的私有属性。</p>
+<p>2、根据这些属性，创建它们的setter和getter方法。（eclipse等集成开发软件可以自动生成。具体怎么生成？请自行百度。）</p>
+<p>3、提供带参数的构造器和无参数的构造器。</p>
+<p>4、重写父类中的eauals()方法和hashcode()方法。（如果需要涉及到两个对象之间的比较，这两个功能很重要。）</p>
+<p>5、实现序列化并赋予其一个版本号。</p>
+<p>下面是我写的一个实体类（entity）例子：具体的细节都用注释标注了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"> <span class="number">1</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</div><div class="line"> <span class="number">2</span>     <span class="comment">/**</span></div><div class="line"> 3      * 版本号</div><div class="line"> 4      */</div><div class="line"> <span class="number">5</span>     <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</div><div class="line"> <span class="number">6</span>     <span class="comment">//定义的私有属性</span></div><div class="line"> <span class="number">7</span>     <span class="keyword">private</span> <span class="keyword">int</span> id;</div><div class="line"> <span class="number">8</span>     <span class="keyword">private</span> String name;</div><div class="line"> <span class="number">9</span>     <span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line"><span class="number">10</span>     <span class="keyword">private</span> <span class="keyword">double</span> score;</div><div class="line"><span class="number">11</span>     <span class="comment">//无参数的构造器</span></div><div class="line"><span class="number">12</span>     <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="number">13</span>         </div><div class="line"><span class="number">14</span>     &#125;</div><div class="line"><span class="number">15</span>     <span class="comment">//有参数的构造器</span></div><div class="line"><span class="number">16</span>     <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(<span class="keyword">int</span> id,String name,<span class="keyword">int</span> age, <span class="keyword">double</span> score)</span></span>&#123;</div><div class="line"><span class="number">17</span>         <span class="keyword">this</span>.id = id;</div><div class="line"><span class="number">18</span>         <span class="keyword">this</span>.name = name;</div><div class="line"><span class="number">19</span>         <span class="keyword">this</span>.age = age;</div><div class="line"><span class="number">20</span>         <span class="keyword">this</span>.score = score;</div><div class="line"><span class="number">21</span>     &#125;</div><div class="line"><span class="number">22</span>     <span class="comment">//创建的setter和getter方法</span></div><div class="line"><span class="number">23</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">24</span>         <span class="keyword">return</span> id;</div><div class="line"><span class="number">25</span>     &#125;</div><div class="line"><span class="number">26</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</div><div class="line"><span class="number">27</span>         <span class="keyword">this</span>.id = id;</div><div class="line"><span class="number">28</span>     &#125;</div><div class="line"><span class="number">29</span>     <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">30</span>         <span class="keyword">return</span> name;</div><div class="line"><span class="number">31</span>     &#125;</div><div class="line"><span class="number">32</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line"><span class="number">33</span>         <span class="keyword">this</span>.name = name;</div><div class="line"><span class="number">34</span>     &#125;</div><div class="line"><span class="number">35</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">36</span>         <span class="keyword">return</span> age;</div><div class="line"><span class="number">37</span>     &#125;</div><div class="line"><span class="number">38</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line"><span class="number">39</span>         <span class="keyword">this</span>.age = age;</div><div class="line"><span class="number">40</span>     &#125;</div><div class="line"><span class="number">41</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getScore</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">42</span>         <span class="keyword">return</span> score;</div><div class="line"><span class="number">43</span>     &#125;</div><div class="line"><span class="number">44</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setScore</span><span class="params">(<span class="keyword">double</span> score)</span> </span>&#123;</div><div class="line"><span class="number">45</span>         <span class="keyword">this</span>.score = score;</div><div class="line"><span class="number">46</span>     &#125;</div><div class="line"><span class="number">47</span>     <span class="comment">//由于id对于学生这个类是唯一可以标识的，所以重写了父类中的id的hashCode()和equals()方法。</span></div><div class="line"><span class="number">48</span>     <span class="meta">@Override</span></div><div class="line"><span class="number">49</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">50</span>         <span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;</div><div class="line"><span class="number">51</span>         <span class="keyword">int</span> result = <span class="number">1</span>;</div><div class="line"><span class="number">52</span>         result = prime * result + id;</div><div class="line"><span class="number">53</span>         <span class="keyword">return</span> result;</div><div class="line"><span class="number">54</span>     &#125;</div><div class="line"><span class="number">55</span>     <span class="meta">@Override</span></div><div class="line"><span class="number">56</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</div><div class="line"><span class="number">57</span>         <span class="keyword">if</span> (<span class="keyword">this</span> == obj)</div><div class="line"><span class="number">58</span>             <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"><span class="number">59</span>         <span class="keyword">if</span> (obj == <span class="keyword">null</span>)</div><div class="line"><span class="number">60</span>             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"><span class="number">61</span>         <span class="keyword">if</span> (getClass() != obj.getClass())</div><div class="line"><span class="number">62</span>             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"><span class="number">63</span>         Student other = (Student) obj;</div><div class="line"><span class="number">64</span>         <span class="keyword">if</span> (id != other.id)</div><div class="line"><span class="number">65</span>             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"><span class="number">66</span>         <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"><span class="number">67</span>     &#125;</div><div class="line"><span class="number">68</span>     </div><div class="line"><span class="number">69</span> &#125;</div><div class="line">一个学生的Java实体类就基本完成了。</div></pre></td></tr></table></figure>
       
 
       
@@ -218,17 +182,6 @@ https://maven.apache.org
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -279,7 +232,7 @@ https://maven.apache.org
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/13/Maven/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/19/entity/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,18 +246,18 @@ https://maven.apache.org
   
 <nav id="article-nav">
   
-    <a href="/2017/06/13/Pattern和Matcher/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/06/19/对象的多态性/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Pattern和Matcher
+          对象的多态性
         
       </div>
     </a>
   
   
-    <a href="/2017/06/13/软件测试/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">软件测试</div>
+    <a href="/2017/06/13/博客整理/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">博客整理</div>
       <i class="icon-circle-right"></i>
     </a>
   

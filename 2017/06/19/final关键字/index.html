@@ -6,48 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Maven | E</title>
+  <title>final关键字 | E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#安装及配置
-
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
+  <meta name="description" content="最终，被final修饰的类叫最终类，如String类。
 
 
-在IDEA设置maven相关配置">
+使用final修饰的类不能派生子类
+使用final修饰的方法不能被子类所覆写
+使用final修饰的变量即成为常量，常量不能修改
+
+String类用final修饰有多方面原因，主要是不想让String被修改，涉及到hash值、常量池引用同一个字面量">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Maven">
-<meta property="og:url" content="//etuloser.com/2017/06/13/Maven/index.html">
+<meta property="og:title" content="final关键字">
+<meta property="og:url" content="//etuloser.com/2017/06/19/final关键字/index.html">
 <meta property="og:site_name" content="E">
-<meta property="og:description" content="#安装及配置
-
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
+<meta property="og:description" content="最终，被final修饰的类叫最终类，如String类。
 
 
-在IDEA设置maven相关配置">
-<meta property="og:updated_time" content="2017-06-13T06:09:32.670Z">
+使用final修饰的类不能派生子类
+使用final修饰的方法不能被子类所覆写
+使用final修饰的变量即成为常量，常量不能修改
+
+String类用final修饰有多方面原因，主要是不想让String被修改，涉及到hash值、常量池引用同一个字面量">
+<meta property="og:updated_time" content="2017-06-19T03:21:15.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Maven">
-<meta name="twitter:description" content="#安装及配置
-
-https://maven.apache.org
-配置环境变量M2_HOME并添加到path
-配置settings.xml
-
-&amp;lt;localRepository&amp;gt;本地仓库&amp;lt;/localRepository&amp;gt;
-&amp;lt;mirrors&amp;gt;阿里云&amp;lt;/mirrors&amp;gt;
+<meta name="twitter:title" content="final关键字">
+<meta name="twitter:description" content="最终，被final修饰的类叫最终类，如String类。
 
 
-在IDEA设置maven相关配置">
+使用final修饰的类不能派生子类
+使用final修饰的方法不能被子类所覆写
+使用final修饰的变量即成为常量，常量不能修改
+
+String类用final修饰有多方面原因，主要是不想让String被修改，涉及到hash值、常量池引用同一个字面量">
   
   
     <link rel="icon" href="/assets/blogImg/favicon.png">
@@ -167,49 +158,35 @@ https://maven.apache.org
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Maven" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-final关键字" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Maven
+      final关键字
     </h1>
   
 
         
-        <a href="/2017/06/13/Maven/" class="archive-article-date">
-  	<time datetime="2017-06-13T05:56:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-13</time>
+        <a href="/2017/06/19/final关键字/" class="archive-article-date">
+  	<time datetime="2017-06-19T03:21:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#安装及配置</p>
-<ol>
-<li><a href="https://maven.apache.org" title="maven" target="_blank" rel="external">https://maven.apache.org</a></li>
-<li>配置环境变量<code>M2_HOME</code>并添加到path</li>
-<li><p>配置settings.xml</p>
+        <blockquote>
+<p>最终，被final修饰的类叫最终类，如String类。</p>
+</blockquote>
 <ul>
-<li><code>&lt;localRepository&gt;本地仓库&lt;/localRepository&gt;</code></li>
-<li><code>&lt;mirrors&gt;阿里云&lt;/mirrors&gt;</code></li>
+<li>使用final修饰的类不能派生子类</li>
+<li>使用final修饰的方法不能被子类所覆写</li>
+<li>使用final修饰的变量即成为常量，常量不能修改</li>
 </ul>
-</li>
-<li><p>在IDEA设置maven相关配置</p>
-</li>
-</ol>
-<a id="more"></a>
-<hr>
-<p>pom.xml配置：</p>
-<figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment">1</span><span class="string">.</span><span class="comment">http://mvnrepository</span><span class="string">.</span><span class="comment">com/</span></div><div class="line"></div><div class="line"><span class="comment">2</span><span class="string">.</span>&lt;<span class="comment">dependencies</span>&gt;&lt;<span class="comment">/dependencies</span>&gt;</div><div class="line"></div><div class="line"><span class="comment">3</span><span class="string">.</span><span class="comment">项目</span><span class="literal">-</span><span class="literal">-</span><span class="comment">右键</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Maven</span><span class="literal">-</span><span class="literal">-</span><span class="comment">Reimport</span></div></pre></td></tr></table></figure>
-<hr>
-<p>Tomcat设置：</p>
-<p>1.添加Tomcat后到Deployment选择卡下把包放到lib下</p>
-<p>2.在Server选择卡管理自动调起浏览器，改变Update方式</p>
-<hr>
-<p>头文件<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="php"><span class="meta">&lt;?</span>xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span> <span class="meta">?&gt;</span></span>   </div><div class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">"http://www.springframework.org/schema/beans"</span>  </span></div><div class="line"><span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> </div><div class="line">   <span class="attr">xmlns:context</span>=<span class="string">"http://www.springframework.org/schema/context"</span>  </div><div class="line">   <span class="attr">xsi:schemaLocat</span></div></pre></td></tr></table></figure></p>
+<p><strong>String类用final修饰有多方面原因，主要是不想让String被修改，涉及到hash值、常量池引用同一个字面量</strong></p>
 
       
 
@@ -218,17 +195,6 @@ https://maven.apache.org
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 
       
@@ -279,7 +245,7 @@ https://maven.apache.org
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/13/Maven/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/19/final关键字/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -293,18 +259,9 @@ https://maven.apache.org
   
 <nav id="article-nav">
   
-    <a href="/2017/06/13/Pattern和Matcher/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Pattern和Matcher
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/06/13/软件测试/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">软件测试</div>
+    <a href="/2017/06/19/对象的多态性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">对象的多态性</div>
       <i class="icon-circle-right"></i>
     </a>
   

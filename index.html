@@ -135,6 +135,192 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-final关键字" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/19/final关键字/">final关键字</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/19/final关键字/" class="archive-article-date">
+  	<time datetime="2017-06-19T03:21:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>最终，被final修饰的类叫最终类，如String类。</p>
+</blockquote>
+<ul>
+<li>使用final修饰的类不能派生子类</li>
+<li>使用final修饰的方法不能被子类所覆写</li>
+<li>使用final修饰的变量即成为常量，常量不能修改</li>
+</ul>
+<p><strong>String类用final修饰有多方面原因，主要是不想让String被修改，涉及到hash值、常量池引用同一个字面量</strong></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/19/final关键字/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-对象的多态性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/19/对象的多态性/">对象的多态性</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/19/对象的多态性/" class="archive-article-date">
+  	<time datetime="2017-06-19T03:20:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>向上转型：父类 父类对象 = 子类实例</p>
+<p>向下转型：子类 子类对象 = (子类)父类实例//即要强转类型</p>
+</blockquote>
+<p>示例：</p>
+<p>定义父类Father</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Father</span> &#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        System.<span class="keyword">out</span>.println(<span class="string">"我是父类的say方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>定义子类Son1</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Son1</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;</div><div class="line"></div><div class="line">    public void say() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son1类的say方法"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void tell() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son1类的tell方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>定义子类Son2</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Son2</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;</div><div class="line"></div><div class="line">    public void say() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son2类的say方法"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void tell() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son2类的tell方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>向上转型</p>
+<figure class="highlight pony"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="type">Father</span> father = <span class="function"><span class="keyword">new</span> <span class="title">Son1</span>();</span></div><div class="line"><span class="title">father</span>.<span class="title">say</span>()<span class="comment">//此处调用的是子类覆写过的say方法</span></div><div class="line"><span class="title">father</span>.<span class="title">tell</span>()<span class="comment">//报错，因为父类中没有tell方法</span></div></pre></td></tr></table></figure>
+<p><em>发生向上转型后，调用的一定是子类中的被覆写的方法</em></p>
+<p>向下转型</p>
+<figure class="highlight pony"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="type">Father</span> father = <span class="function"><span class="keyword">new</span> <span class="title">Son1</span>()；</span></div><div class="line"><span class="title">Son1</span> <span class="title">son</span> = (<span class="type">Son1</span>)<span class="title">father</span>;</div><div class="line"><span class="title">son</span>.<span class="title">say</span>();</div><div class="line"><span class="title">son</span>.<span class="title">tell</span>();<span class="comment">//均可使用</span></div></pre></td></tr></table></figure>
+<p><em>值得注意的是，要向使用向下转型，必须先向上转型让子类与父类建立联系，否则会出现ClassCastException错误</em></p>
+<hr>
+<p>应用场景：设计一个方法，要求此方法可以接受Father类的子类并调用相应放方法</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public void <span class="function"><span class="keyword">fun</span>(<span class="title">Father</span></span> father)&#123;</div><div class="line">	father.say();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果不使用向上转型，则需要给每个子类添加一个对应的fun(子类 参数名)方法，这显然不合理。</p>
+<hr>
+<p>#instanceof 关键字</p>
+<blockquote>
+<p>用来判断一个对象到底是哪个类的实例</p>
+</blockquote>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Father father = <span class="keyword">new</span> Son1();</div><div class="line">System.out.<span class="keyword">println</span>(father <span class="keyword">instanceof</span> Father);<span class="comment">//t</span></div><div class="line">System.out.<span class="keyword">println</span>(father <span class="keyword">instanceof</span> Son1);<span class="comment">//t</span></div><div class="line">System.out.<span class="keyword">println</span>(father <span class="keyword">instanceof</span> Son2);<span class="comment">//f</span></div></pre></td></tr></table></figure>
+<p>在进行对象向下转型关系前最好先进行判断再进行相应的转型操作</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/19/对象的多态性/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-entity" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/19/entity/">entity</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/19/entity/" class="archive-article-date">
+  	<time datetime="2017-06-19T03:18:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在日常的Java项目开发中，entity（实体类）是必不可少的，它们一般都有很多的属性，并有相应的setter和getter方法。entity（实体类）的作用一般是和数据表做映射。所以快速写出规范的entity（实体类）是java开发中一项必不可少的技能。</p>
+<p>在项目中写实体类一般遵循下面的规范：</p>
+<p>1、根据你的设计，定义一组你需要的私有属性。</p>
+<p>2、根据这些属性，创建它们的setter和getter方法。（eclipse等集成开发软件可以自动生成。具体怎么生成？请自行百度。）</p>
+<p>3、提供带参数的构造器和无参数的构造器。</p>
+<p>4、重写父类中的eauals()方法和hashcode()方法。（如果需要涉及到两个对象之间的比较，这两个功能很重要。）</p>
+<p>5、实现序列化并赋予其一个版本号。</p>
+<p>下面是我写的一个实体类（entity）例子：具体的细节都用注释标注了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"> <span class="number">1</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</div><div class="line"> <span class="number">2</span>     <span class="comment">/**</span></div><div class="line"> 3      * 版本号</div><div class="line"> 4      */</div><div class="line"> <span class="number">5</span>     <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</div><div class="line"> <span class="number">6</span>     <span class="comment">//定义的私有属性</span></div><div class="line"> <span class="number">7</span>     <span class="keyword">private</span> <span class="keyword">int</span> id;</div><div class="line"> <span class="number">8</span>     <span class="keyword">private</span> String name;</div><div class="line"> <span class="number">9</span>     <span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line"><span class="number">10</span>     <span class="keyword">private</span> <span class="keyword">double</span> score;</div><div class="line"><span class="number">11</span>     <span class="comment">//无参数的构造器</span></div><div class="line"><span class="number">12</span>     <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="number">13</span>         </div><div class="line"><span class="number">14</span>     &#125;</div><div class="line"><span class="number">15</span>     <span class="comment">//有参数的构造器</span></div><div class="line"><span class="number">16</span>     <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(<span class="keyword">int</span> id,String name,<span class="keyword">int</span> age, <span class="keyword">double</span> score)</span></span>&#123;</div><div class="line"><span class="number">17</span>         <span class="keyword">this</span>.id = id;</div><div class="line"><span class="number">18</span>         <span class="keyword">this</span>.name = name;</div><div class="line"><span class="number">19</span>         <span class="keyword">this</span>.age = age;</div><div class="line"><span class="number">20</span>         <span class="keyword">this</span>.score = score;</div><div class="line"><span class="number">21</span>     &#125;</div><div class="line"><span class="number">22</span>     <span class="comment">//创建的setter和getter方法</span></div><div class="line"><span class="number">23</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">24</span>         <span class="keyword">return</span> id;</div><div class="line"><span class="number">25</span>     &#125;</div><div class="line"><span class="number">26</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</div><div class="line"><span class="number">27</span>         <span class="keyword">this</span>.id = id;</div><div class="line"><span class="number">28</span>     &#125;</div><div class="line"><span class="number">29</span>     <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">30</span>         <span class="keyword">return</span> name;</div><div class="line"><span class="number">31</span>     &#125;</div><div class="line"><span class="number">32</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line"><span class="number">33</span>         <span class="keyword">this</span>.name = name;</div><div class="line"><span class="number">34</span>     &#125;</div><div class="line"><span class="number">35</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">36</span>         <span class="keyword">return</span> age;</div><div class="line"><span class="number">37</span>     &#125;</div><div class="line"><span class="number">38</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line"><span class="number">39</span>         <span class="keyword">this</span>.age = age;</div><div class="line"><span class="number">40</span>     &#125;</div><div class="line"><span class="number">41</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getScore</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">42</span>         <span class="keyword">return</span> score;</div><div class="line"><span class="number">43</span>     &#125;</div><div class="line"><span class="number">44</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setScore</span><span class="params">(<span class="keyword">double</span> score)</span> </span>&#123;</div><div class="line"><span class="number">45</span>         <span class="keyword">this</span>.score = score;</div><div class="line"><span class="number">46</span>     &#125;</div><div class="line"><span class="number">47</span>     <span class="comment">//由于id对于学生这个类是唯一可以标识的，所以重写了父类中的id的hashCode()和equals()方法。</span></div><div class="line"><span class="number">48</span>     <span class="meta">@Override</span></div><div class="line"><span class="number">49</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">50</span>         <span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;</div><div class="line"><span class="number">51</span>         <span class="keyword">int</span> result = <span class="number">1</span>;</div><div class="line"><span class="number">52</span>         result = prime * result + id;</div><div class="line"><span class="number">53</span>         <span class="keyword">return</span> result;</div><div class="line"><span class="number">54</span>     &#125;</div><div class="line"><span class="number">55</span>     <span class="meta">@Override</span></div><div class="line"><span class="number">56</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</div><div class="line"><span class="number">57</span>         <span class="keyword">if</span> (<span class="keyword">this</span> == obj)</div><div class="line"><span class="number">58</span>             <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"><span class="number">59</span>         <span class="keyword">if</span> (obj == <span class="keyword">null</span>)</div><div class="line"><span class="number">60</span>             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"><span class="number">61</span>         <span class="keyword">if</span> (getClass() != obj.getClass())</div><div class="line"><span class="number">62</span>             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"><span class="number">63</span>         Student other = (Student) obj;</div><div class="line"><span class="number">64</span>         <span class="keyword">if</span> (id != other.id)</div><div class="line"><span class="number">65</span>             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"><span class="number">66</span>         <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"><span class="number">67</span>     &#125;</div><div class="line"><span class="number">68</span>     </div><div class="line"><span class="number">69</span> &#125;</div><div class="line">一个学生的Java实体类就基本完成了。</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/19/entity/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-博客整理" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -597,146 +783,10 @@
 
 
   
-    <article id="post-swapValue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/22/swapValue/">不使用中间变量，交换a、b的值</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/22/swapValue/" class="archive-article-date">
-  	<time datetime="2017-02-22T10:50:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>一个经典的算法题</strong></p>
-<p>实现方法有三种：加减法、异或法、乘除法。</p>
-<ol>
-<li><p>加减法：该方法可以交换整型和浮点型数值的变量，<strong>但在处理浮点型的时候有可能出现精度的损失。</strong></p>
- <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">a</span> = a + b;</div><div class="line"><span class="attribute">b</span> = a - b;</div><div class="line"><span class="attribute">a</span> = a - b;</div></pre></td></tr></table></figure>
-</li>
-<li><p>异或法：可以完成对整型变量的交换，<strong>对于浮点型变量它无法完成交换。</strong> </p>
-  <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">a</span> = a ^ b;</div><div class="line"><span class="attribute">b</span> = a ^ b;</div><div class="line"><span class="attribute">a</span> = a ^ b;</div></pre></td></tr></table></figure>
-</li>
-<li><p>乘除法：可以处理整型和浮点型变量，但在处理浮点型变量时也存在精度损失问题。而且乘除法比加减法要多一条约束：<strong>b必不为0。</strong></p>
- <figure class="highlight ini"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="attr">a</span> = a * b</div><div class="line"><span class="attr">b</span> = a / b</div><div class="line"><span class="attr">a</span> = a / b</div></pre></td></tr></table></figure>
-</li>
-</ol>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/22/swapValue/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-about-this-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/22/about-this-blog/">关于本博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/22/about-this-blog/" class="archive-article-date">
-  	<time datetime="2017-02-22T02:21:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本博客使用<strong>hexo</strong>搭建，部署在<strong>github page</strong>上，域名注册于<strong>godaddy</strong>，至于搭建方法，前辈们已经总结了很多详细的资料，在此不再赘述。</p>
-<hr>
-<p><strong>hexo常用命令</strong></p>
-<ul>
-<li>hexo g    //静态部署</li>
-<li>hexo d    //部署到githubpage</li>
-<li>hexo clean    //清静态部署</li>
-<li>hexo s    //运行服务器</li>
-<li>hexo n “文章名”    //新建文章</li>
-<li><code>&lt;!--more--&gt;</code>    //文章缩略</li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">文档</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/22/about-this-blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -829,15 +879,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color3">文档</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">J2SE</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">文档</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -853,11 +899,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Sublime</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">软件测试</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Sublime</a>
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
             
             <div class="clearfix"></div>
