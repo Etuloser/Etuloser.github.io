@@ -6,14 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Tag: J2SE | E</title>
+  <title>Annotation | E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="E">
-<meta property="og:url" content="//etuloser.com/tags/J2SE/index.html">
+  <meta name="description" content="Annotation (注释)，用来对程序进行补充说明，无论是否使用注释都不影响原程序的运行
+java.lang.annotation.Annotation 是 Annotation 的接口，只要是Annotat都必须实现此接口
+
+123456public interface Annotation &amp;#123;		public Class&amp;lt;? extends Annotataion&amp;gt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Annotation">
+<meta property="og:url" content="//etuloser.com/2017/06/19/Annotation/index.html">
 <meta property="og:site_name" content="E">
+<meta property="og:description" content="Annotation (注释)，用来对程序进行补充说明，无论是否使用注释都不影响原程序的运行
+java.lang.annotation.Annotation 是 Annotation 的接口，只要是Annotat都必须实现此接口
+
+123456public interface Annotation &amp;#123;		public Class&amp;lt;? extends Annotataion&amp;gt;">
+<meta property="og:updated_time" content="2017-06-19T03:44:44.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="E">
+<meta name="twitter:title" content="Annotation">
+<meta name="twitter:description" content="Annotation (注释)，用来对程序进行补充说明，无论是否使用注释都不影响原程序的运行
+java.lang.annotation.Annotation 是 Annotation 的接口，只要是Annotat都必须实现此接口
+
+123456public interface Annotation &amp;#123;		public Class&amp;lt;? extends Annotataion&amp;gt;">
   
   
     <link rel="icon" href="/assets/blogImg/favicon.png">
@@ -133,60 +146,144 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Annotation" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/13/Pattern和Matcher/" class="archive-article-date">
-  	<time datetime="2017-06-13T05:58:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/13/Pattern和Matcher/">Pattern和Matcher</a>
+    <h1 class="article-title" itemprop="name">
+      Annotation
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">J2SE</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2017/06/19/Annotation/" class="archive-article-date">
+  	<time datetime="2017-06-19T03:27:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>Annotation (注释)，用来对程序进行补充说明，无论是否使用注释都不影响原程序的运行</p>
+<p>java.lang.annotation.Annotation 是 Annotation 的接口，只要是Annotat都必须实现此接口</p>
+</blockquote>
+<figure class="highlight monkey"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Annotation</span> &#123;</span></div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">Class</span>&lt;? <span class="keyword">extends</span> <span class="title">Annotataion</span>&gt; <span class="title">annotationType</span>();</span></div><div class="line">	<span class="keyword">public</span> boolean equals(Object obj);</div><div class="line">	String toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>&lt;–!more–&gt;</p>
+<p><strong>@Override</strong></p>
+<blockquote>
+<p>保证方法正确覆写</p>
+</blockquote>
+<p><strong>Deprecated</strong></p>
+<blockquote>
+<p>声明一个不建议使用的方法</p>
+</blockquote>
+<hr>
+<p>####自定义Annotation</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[<span class="keyword">public</span>] @<span class="class"><span class="keyword">interface</span> <span class="title">Annotation</span>名称 </span>&#123;</div><div class="line"></div><div class="line">	数据类型 变量名称()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>使用@interface就相当于继承了Annotation接口</strong></p>
 
-          
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/19/Annotation/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/19/Spring/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Spring
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/06/19/final关键字/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">final关键字</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -209,9 +306,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

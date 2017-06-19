@@ -135,6 +135,129 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-prettify" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/01/prettify/">prettify</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/01/prettify/" class="archive-article-date">
+  	<time datetime="2017-03-01T04:57:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>使用Sublime text 3 编写代码是一种享受，使用Sublime text 3 格式化HTML代码，需要安装插件，具体安装步骤如下：</p>
+<p>1、打开菜单-&gt;首选项-&gt;插件控制，输入 install package</p>
+<p>2、等待程序进入插件管理功能，再输入插件名称：TAG</p>
+<p>3、点击安装插件html-css-js prettify 。</p>
+<p>4、插件安装成功后，在需要格式化的HTML代码中，选中代码，然后按Ctrl+Alt+H对代码进行格式化。</p>
+<p>html-css-js prettify 格式化CSS会再每个CSS后面都添加一个换行，取消该换行的方法：</p>
+<p>打开：菜单&gt;tools&gt;html/css/js prettify&gt;set prettify preferences<br>修改设置newline_between_rules的参数为false</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Sublime</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/01/prettify/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
+    <article id="post-times" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/22/times/">检查一个字符串每个字符出现的次数</a>
+    </h1>
+  
+
+        
+        <a href="/2017/02/22/times/" class="archive-article-date">
+  	<time datetime="2017-02-22T14:30:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Str = <span class="string">"hellohellohello"</span>;</div><div class="line"><span class="keyword">var</span> <span class="keyword">new</span><span class="type">Str</span> = Str.split(<span class="string">""</span>).sort();</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">times</span></span>(Str) &#123;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; len; i = lastIndex+<span class="number">1</span>) &#123;</div><div class="line">		<span class="keyword">var</span> key = <span class="keyword">new</span><span class="type">Str</span>[i];</div><div class="line">		<span class="keyword">var</span> lastIndex = <span class="keyword">new</span><span class="type">Str</span>.join(<span class="string">""</span>).lastIndexOf(key);</div><div class="line">        <span class="keyword">var</span> count = lastIndex + <span class="number">1</span> - i;</div><div class="line">        console.log(key+<span class="string">"出现了"</span>+ count +<span class="string">"次"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">times(Str);</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/02/22/times/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-swapValue" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -371,11 +494,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color5">J2SE</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">J2SE</a>
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
              
               <li class="article-tag-list-item">
