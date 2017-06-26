@@ -6,14 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Tag: Sublime | E</title>
+  <title>Mybatis | E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="E">
-<meta property="og:url" content="//etuloser.com/tags/Sublime/index.html">
+  <meta name="description" content="为了摆脱繁琐和枯燥的重复操作，减少代码重复率，mybatis是一个很好的选择
+
+
+创建实体类映射表
+ 123456789101112131415161718192021public class Category &amp;#123;    private int id;    private String name;    public int getId() &amp;#123;        return">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mybatis">
+<meta property="og:url" content="//etuloser.com/2017/06/24/Mybatis/index.html">
 <meta property="og:site_name" content="E">
+<meta property="og:description" content="为了摆脱繁琐和枯燥的重复操作，减少代码重复率，mybatis是一个很好的选择
+
+
+创建实体类映射表
+ 123456789101112131415161718192021public class Category &amp;#123;    private int id;    private String name;    public int getId() &amp;#123;        return">
+<meta property="og:updated_time" content="2017-06-25T04:29:46.755Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="E">
+<meta name="twitter:title" content="Mybatis">
+<meta name="twitter:description" content="为了摆脱繁琐和枯燥的重复操作，减少代码重复率，mybatis是一个很好的选择
+
+
+创建实体类映射表
+ 123456789101112131415161718192021public class Category &amp;#123;    private int id;    private String name;    public int getId() &amp;#123;        return">
   
   
     <link rel="icon" href="/assets/blogImg/favicon.png">
@@ -133,60 +149,141 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Mybatis" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/01/prettify/" class="archive-article-date">
-  	<time datetime="2017-03-01T04:57:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/01/prettify/">prettify</a>
+    <h1 class="article-title" itemprop="name">
+      Mybatis
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/06/24/Mybatis/" class="archive-article-date">
+  	<time datetime="2017-06-24T12:25:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>为了摆脱繁琐和枯燥的重复操作，减少代码重复率，mybatis是一个很好的选择</p>
+</blockquote>
+<ol>
+<li><p>创建实体类映射表</p>
+ <figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Category</span> &#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</div><div class="line">    <span class="keyword">private</span> String name;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span>(<span class="params"><span class="keyword">int</span> id</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.id = id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span>(<span class="params">String name</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置mybatis-cfg.xml</p>
+ <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--包扫描--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">typeAliases</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"pojo"</span>/&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">typeAliases</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">"development"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">"development"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">"JDBC"</span>/&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">"POOLED"</span>&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driver"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql://localhost:3306/how2java?characterEncoding=UTF-8"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"root"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"123456"</span>/&gt;</span></div><div class="line">           <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--映射Category.xml--&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">"pojo/Category.xml"</span>/&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>配置文件Category.xml</p>
+ <figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;mapper <span class="keyword">namespace</span>=<span class="string">"pojo"</span>&gt;</div><div class="line">   &lt;insert id=<span class="string">"addCategory"</span> parameterType=<span class="string">"Category"</span>&gt;</div><div class="line">       <span class="keyword">INTO</span> <span class="keyword">INTO</span> category_ (name) VALUE (<span class="meta">#&#123;name&#125;)</span></div><div class="line">   &lt;/insert&gt;</div><div class="line">   &lt;delete id=<span class="string">"delCategory"</span> parameterType=<span class="string">"Category"</span>&gt;</div><div class="line">       DELETE <span class="keyword">FROM</span> category_ <span class="keyword">WHERE</span> name = <span class="meta">#&#123;name&#125;</span></div><div class="line">   &lt;/delete&gt;</div><div class="line">   &lt;<span class="keyword">select</span> id=<span class="string">"getCategory"</span> parameterType=<span class="string">"_int"</span> resultType=<span class="string">"Category"</span>&gt;</div><div class="line">       <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> category_ <span class="keyword">WHERE</span> id = <span class="meta">#&#123;id&#125;</span></div><div class="line">   &lt;/<span class="keyword">select</span>&gt;</div><div class="line">   &lt;update id=<span class="string">"updateCategory"</span> parameterType=<span class="string">"Category"</span>&gt;</div><div class="line">       UPDATE category_ <span class="keyword">set</span> name = <span class="meta">#&#123;name&#125; WHERE id = #&#123;id&#125;</span></div><div class="line">   &lt;/update&gt;</div><div class="line">   &lt;<span class="keyword">select</span> id=<span class="string">"listCategory"</span> resultType=<span class="string">"Category"</span>&gt;</div><div class="line">       <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> category_</div><div class="line">   &lt;/<span class="keyword">select</span>&gt;</div><div class="line">&lt;/mapper&gt;</div></pre></td></tr></table></figure></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Sublime</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Mybatis</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/24/Mybatis/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2017/06/22/EL表达式/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">EL表达式</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -209,9 +306,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

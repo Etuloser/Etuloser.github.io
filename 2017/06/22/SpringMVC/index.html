@@ -6,14 +6,42 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Tag: Sublime | E</title>
+  <title>SpringMVC | E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="E">
-<meta property="og:url" content="//etuloser.com/tags/Sublime/index.html">
+  <meta name="description" content="开始学习 SpringMVC 的时候从网上找了个例子，在部署到 Tomcat 上时候遇到了一个问题，我用的是 IDEA
+
+在 IDEA 中导入项目后，需要手动添加 Tomcat 服务器，并且添加 artifacts，这个具体是什么我暂时不知道，留着以后探究，猜测应该是服务器 lib 依赖，这里只说如何做
+
+
+&amp;lt;–!more–&amp;gt;
+
+1.在建立好项目，添加好 jar 包依赖后，开始配置 w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringMVC">
+<meta property="og:url" content="//etuloser.com/2017/06/22/SpringMVC/index.html">
 <meta property="og:site_name" content="E">
+<meta property="og:description" content="开始学习 SpringMVC 的时候从网上找了个例子，在部署到 Tomcat 上时候遇到了一个问题，我用的是 IDEA
+
+在 IDEA 中导入项目后，需要手动添加 Tomcat 服务器，并且添加 artifacts，这个具体是什么我暂时不知道，留着以后探究，猜测应该是服务器 lib 依赖，这里只说如何做
+
+
+&amp;lt;–!more–&amp;gt;
+
+1.在建立好项目，添加好 jar 包依赖后，开始配置 w">
+<meta property="og:image" content="http://i.imgur.com/rZMPbis.png">
+<meta property="og:image" content="http://i.imgur.com/On11dyk.png">
+<meta property="og:updated_time" content="2017-06-22T16:21:50.300Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="E">
+<meta name="twitter:title" content="SpringMVC">
+<meta name="twitter:description" content="开始学习 SpringMVC 的时候从网上找了个例子，在部署到 Tomcat 上时候遇到了一个问题，我用的是 IDEA
+
+在 IDEA 中导入项目后，需要手动添加 Tomcat 服务器，并且添加 artifacts，这个具体是什么我暂时不知道，留着以后探究，猜测应该是服务器 lib 依赖，这里只说如何做
+
+
+&amp;lt;–!more–&amp;gt;
+
+1.在建立好项目，添加好 jar 包依赖后，开始配置 w">
+<meta name="twitter:image" content="http://i.imgur.com/rZMPbis.png">
   
   
     <link rel="icon" href="/assets/blogImg/favicon.png">
@@ -133,60 +161,210 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-SpringMVC" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/01/prettify/" class="archive-article-date">
-  	<time datetime="2017-03-01T04:57:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/01/prettify/">prettify</a>
+    <h1 class="article-title" itemprop="name">
+      SpringMVC
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Sublime</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2017/06/22/SpringMVC/" class="archive-article-date">
+  	<time datetime="2017-06-22T11:04:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开始学习 SpringMVC 的时候从网上找了个例子，在部署到 Tomcat 上时候遇到了一个问题，我用的是 IDEA</p>
+<blockquote>
+<p>在 IDEA 中导入项目后，需要手动添加 Tomcat 服务器，并且添加 artifacts，这个具体是什么我暂时不知道，留着以后探究，猜测应该是服务器 lib 依赖，这里只说如何做</p>
+</blockquote>
+<p><img src="http://i.imgur.com/rZMPbis.png" alt=""></p>
+<p>&lt;–!more–&gt;</p>
+<hr>
+<p><strong>1.在建立好项目，添加好 jar 包依赖后，开始配置 web.xml</strong></p>
+<p>配置 SpringMVC 的入口 DispatcherServlet</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springmvc<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springmvc<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong>2.配置 Spring-servlet.xml, 这是 Spring MVC 的映射配置文件</strong></p>
+<p>表示访问 /index 路径会交由 id=indexController 的bean处理</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;bean <span class="built_in">id</span>=<span class="string">"simpleUrlHandlerMapping"</span> <span class="built_in">class</span>=<span class="string">"org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"</span>&gt;</div><div class="line">	&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"mappings"</span>&gt;</div><div class="line">		&lt;props&gt;</div><div class="line">			&lt;<span class="keyword">prop</span> key=<span class="string">"/index"</span>&gt;indexController&lt;/<span class="keyword">prop</span>&gt;</div><div class="line">		/props&gt;</div><div class="line">	&lt;/<span class="keyword">property</span>&gt;</div><div class="line">&lt;/bean&gt;</div><div class="line"></div><div class="line">&lt;bean <span class="built_in">id</span>=<span class="string">"indexController"</span> <span class="built_in">class</span>=<span class="string">"controller.IndexController"</span>&gt;&lt;/bean&gt;</div></pre></td></tr></table></figure>
+<p><strong>3.然后声明控制类 IndexController</strong></p>
+<p>控制类 IndexController实现接口 Controller，提供方法 handleRequest 处理请求</p>
+<p>SpringMVC 通过 ModelAndView 对象把模型和视图结合在一起</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IndexController</span> <span class="keyword">implements</span> <span class="title">Controller</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ModelAndView <span class="title">handleRequest</span><span class="params">(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView(<span class="string">"index.jsp"</span>);</div><div class="line">        modelAndView.addObject(<span class="string">"message"</span>,<span class="string">"Hello Spring MVC"</span>);</div><div class="line">        <span class="keyword">return</span>  modelAndView;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p><img src="http://i.imgur.com/On11dyk.png" alt=""></p>
+<hr>
+<p><strong>视图定位</strong></p>
+<ol>
+<li><p>通过修改 sprinmvc-servlet.xml 来实现视图定位</p>
+ <figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;bean <span class="built_in">id</span>=<span class="string">"viewResolver"</span> <span class="built_in">class</span>=<span class="string">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span>&gt;</div><div class="line">   &lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"prefix"</span> value=<span class="string">"/WEB-INF/page/"</span> /&gt;</div><div class="line">   &lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"suffix"</span> value=<span class="string">".jsp"</span> /&gt;</div><div class="line">&lt;/bean&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>修改 IndexController 类</p>
+<p> <code>ModelAndView mav = new ModelAndView(&quot;index&quot;);</code></p>
+</li>
+</ol>
+<p>为什么要这样做？</p>
+<p>如果写死路径不利于维护修改</p>
+<hr>
+<p><strong>注解方式</strong></p>
+<p>同样 springmvc 也可以用注解来实现</p>
+<ol>
+<li><p>声明 IndexController 是控制类,同时不再让IndexController实现Controller类</p>
+ <figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@<span class="type">Controller</span></div><div class="line">public class <span class="type">IndexController</span><span class="meta">&#123;...&#125;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>声明 handleRequest 方法是 RequestMapping 同时加上参数,表示路径/index会映射到该方法上</p>
+ <figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@<span class="type">RequestMapping</span>(<span class="string">"/index"</span>)</div><div class="line">public <span class="type">ModelAndView</span> handleRequest(<span class="type">HttpServletRequest</span> request, <span class="type">HttpServletResponse</span> response)<span class="meta">&#123;...&#125;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>在配置文件里添加头文件标签约束并开启包扫描</p>
+<p> <em>头文件参考spring笔记</em></p>
+<p> <context:annotation-config></context:annotation-config></p>
+ <context:component-scan base-package="controller">
 
-          
+</context:component-scan></li>
+</ol>
+<hr>
+<p><strong>接受表单数据</strong></p>
+<blockquote>
+<p>浏览器提交数据是非常常见的场景，本例演示用户提交产品名称和价格到Spring MVC Spring MVC如何接受数据</p>
+</blockquote>
+<ol>
+<li><p>个人喜欢从页面做起，先写一个提交数据的页面 addProduct.jsp</p>
+  <figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">form</span> action=<span class="string">"/addProduct"</span>&gt;</div><div class="line">       产品名称：&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"text"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;&lt;<span class="keyword">br</span>/&gt;</div><div class="line">       产品价格：&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"text"</span> name=<span class="string">"price"</span> value=<span class="string">""</span>&gt;&lt;<span class="keyword">br</span>/&gt;</div><div class="line">       &lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"submit"</span> value=<span class="string">"增加商品"</span>&gt;</div><div class="line">   &lt;/<span class="keyword">form</span>&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>该jsp页面会把数据传到 /addProduct 下
+</code></pre><ol>
+<li><p>声明 ProductController 控制器来处理 JSP 传过来的数据</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Controller</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/addProduct"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> ModelAndView <span class="title">add</span><span class="params">(Product product)</span><span class="keyword">throws</span> Exception</span>&#123;</div><div class="line">        ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView(<span class="string">"showProduct"</span>);</div><div class="line">        <span class="keyword">return</span> modelAndView;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<pre><code>add 方法接受了 jsp 传过来的参数并把它们注入到了 product 对象里，并通过此对象生成了 showProduct 页面，相当于
 
+modelAndView.addObject(&quot;product&quot;,product);
+</code></pre><ol>
+<li><p>写 showProduct.jsp 页面来显示结果，用EL表达式</p>
+<p> 产品名称： ${product.name}<br><br> 产品价格： ${product.price}</p>
+</li>
+</ol>
+<hr>
+<p><strong>客户端跳转</strong></p>
+<pre><code><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/jump"</span>)</div><div class="line"><span class="keyword">public</span> <span class="function">ModelAndView <span class="title">jump</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView(<span class="string">"redirect:/index"</span>);</div><div class="line">    <span class="keyword">return</span> modelAndView;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</code></pre><p>显然，通过 <strong>redirect:</strong> 即可完成客户端跳转</p>
+<hr>
+<p><strong>刷session</strong></p>
+<pre><code><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"check"</span>)</div><div class="line">   <span class="keyword">public</span> <span class="function">ModelAndView <span class="title">check</span><span class="params">(HttpSession session)</span> </span>&#123;</div><div class="line">       Integer i = (Integer) session.getAttribute(<span class="string">"count"</span>);</div><div class="line">       <span class="keyword">if</span> (i == <span class="keyword">null</span>) &#123;</div><div class="line">           i = <span class="number">0</span>;</div><div class="line">       &#125;</div><div class="line">       i++;</div><div class="line">       session.setAttribute(<span class="string">"count"</span>, i);</div><div class="line">       ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView(<span class="string">"check"</span>);</div><div class="line">       <span class="keyword">return</span> modelAndView;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</code></pre><hr>
+<p><strong>filter</strong></p>
+<pre><code><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.springframework.web.filter.CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>encoding<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>utf-8<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></div></pre></td></tr></table></figure>
+</code></pre><hr>
+<p><strong>上传文件</strong></p>
+<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UploadController</span> </span>&#123;</div><div class="line"></div><div class="line">    @RequestMapping(<span class="string">"/uploadImage"</span>)</div><div class="line">    <span class="keyword">public</span> ModelAndView upload(HttpServletRequest request, HttpServletResponse response, UploadedImageFile file) throws IOException &#123;</div><div class="line"></div><div class="line">        <span class="keyword">String</span> name = RandomStringUtils.randomAlphanumeric(<span class="number">10</span>);</div><div class="line">        <span class="keyword">String</span> <span class="keyword">new</span><span class="type">FileName</span> = name + <span class="string">".jpg"</span>;</div><div class="line">        File <span class="keyword">new</span><span class="type">File</span> = <span class="keyword">new</span> <span class="type">File</span>(request.getServletContext().getRealPath(<span class="string">"/image"</span>),<span class="keyword">new</span><span class="type">FileName</span>);</div><div class="line">        <span class="keyword">new</span><span class="type">File</span>.getParentFile().mkdir();</div><div class="line">        file.getImage().transferTo(<span class="keyword">new</span><span class="type">File</span>);</div><div class="line"></div><div class="line">        ModelAndView modelAndView = <span class="keyword">new</span> <span class="type">ModelAndView</span>(<span class="string">"showUploadedFile"</span>);</div><div class="line">        modelAndView.addObject(<span class="string">"imageName"</span>,<span class="keyword">new</span><span class="type">FileName</span>);</div><div class="line">        <span class="keyword">return</span> modelAndView;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/22/SpringMVC/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/22/Servlet/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Servlet
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/06/19/ajax/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ajax</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -209,9 +387,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

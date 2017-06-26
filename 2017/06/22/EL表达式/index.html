@@ -6,14 +6,36 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Tag: Sublime | E</title>
+  <title>EL表达式 | E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="E">
-<meta property="og:url" content="//etuloser.com/tags/Sublime/index.html">
+  <meta name="description" content="E L（Expression Language） 目的：为了使 JSP 写起来更加简单。表达式语言的灵感来自于 ECMAScript 和 XPath 表达式语言，它提供了在 JSP 中简化表达式的方法，让Jsp的代码更加简化
+
+果然是从前端借鉴过来的。。。
+&amp;lt;–!more–&amp;gt;
+
+
+最好在 &amp;#x25;&amp;#64;&amp;#112;&amp;#x61;&amp;#x67;&amp;#101;&amp;#37; 标签中加上 i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EL表达式">
+<meta property="og:url" content="//etuloser.com/2017/06/22/EL表达式/index.html">
 <meta property="og:site_name" content="E">
+<meta property="og:description" content="E L（Expression Language） 目的：为了使 JSP 写起来更加简单。表达式语言的灵感来自于 ECMAScript 和 XPath 表达式语言，它提供了在 JSP 中简化表达式的方法，让Jsp的代码更加简化
+
+果然是从前端借鉴过来的。。。
+&amp;lt;–!more–&amp;gt;
+
+
+最好在 &amp;#x25;&amp;#64;&amp;#112;&amp;#x61;&amp;#x67;&amp;#101;&amp;#37; 标签中加上 i">
+<meta property="og:updated_time" content="2017-06-22T12:28:10.070Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="E">
+<meta name="twitter:title" content="EL表达式">
+<meta name="twitter:description" content="E L（Expression Language） 目的：为了使 JSP 写起来更加简单。表达式语言的灵感来自于 ECMAScript 和 XPath 表达式语言，它提供了在 JSP 中简化表达式的方法，让Jsp的代码更加简化
+
+果然是从前端借鉴过来的。。。
+&amp;lt;–!more–&amp;gt;
+
+
+最好在 &amp;#x25;&amp;#64;&amp;#112;&amp;#x61;&amp;#x67;&amp;#101;&amp;#37; 标签中加上 i">
   
   
     <link rel="icon" href="/assets/blogImg/favicon.png">
@@ -133,60 +155,156 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-EL表达式" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/01/prettify/" class="archive-article-date">
-  	<time datetime="2017-03-01T04:57:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/01/prettify/">prettify</a>
+    <h1 class="article-title" itemprop="name">
+      EL表达式
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Sublime</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        <a href="/2017/06/22/EL表达式/" class="archive-article-date">
+  	<time datetime="2017-06-22T12:16:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>E L（Expression Language） 目的：为了使 JSP 写起来更加简单。表达式语言的灵感来自于 ECMAScript 和 XPath 表达式语言，它提供了在 JSP 中简化表达式的方法，让Jsp的代码更加简化</p>
+</blockquote>
+<p>果然是从前端借鉴过来的。。。</p>
+<p>&lt;–!more–&gt;</p>
+<hr>
+<ol>
+<li><p>最好在 <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x25;&#64;&#112;&#x61;&#x67;&#101;&#37;">&#x25;&#64;&#112;&#x61;&#x67;&#101;&#37;</a> 标签中加上 isELIgnored=”false”,以开启 Tomcat 对 EL 表达式的支持</p>
+</li>
+<li><p>作用域优先级</p>
+<p> <strong>pageContext&gt;request&gt;session&gt;application</strong></p>
+</li>
+<li><p>可以方便的访问 JavaBean 中的属性</p>
+<p> 如：${user.name}</p>
+</li>
+<li><p>结合JSTL的 <c:foeach> 使用，进一步简化代码</c:foeach></p>
+ <figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">items</span>=<span class="string">"$</span></span></span><span class="template-variable">&#123;heros&#125;</span><span class="xml"><span class="tag"><span class="string">"</span> <span class="attr">var</span>=<span class="string">"hero"</span> <span class="attr">varStatus</span>=<span class="string">"st"</span>  &gt;</span></span></div><div class="line">   <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">td</span>&gt;</span>$<span class="template-variable">&#123;st.count&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></div><div class="line">       <span class="tag">&lt;<span class="name">td</span>&gt;</span>$<span class="template-variable">&#123;hero&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></div><div class="line">   <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">c:forEach</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>取参</p>
+<p> EL表达式还可以做到request.getParameter(“name”) 这样的形式获取浏览器传递过来的参数<br> 先把jstl.jsp代码改为如例所示，然后访问如下地址</p>
+<blockquote>
+<p><a href="http://127.0.0.1/jstl.jsp?name=abc" target="_blank" rel="external">http://127.0.0.1/jstl.jsp?name=abc</a></p>
+</blockquote>
+<p> &lt;%@ page language=”java” contentType=”text/html; charset=UTF-8”</p>
+<pre><code>pageEncoding=&quot;UTF-8&quot; import=&quot;java.util.*&quot; isELIgnored=&quot;false&quot;%&gt;
+</code></pre><p> ${param.name}</p>
+</li>
+<li><p>进行比较</p>
+</li>
+</ol>
 
-          
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/22/EL表达式/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/24/Mybatis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Mybatis
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/06/22/Servlet/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Servlet</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -209,9 +327,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",

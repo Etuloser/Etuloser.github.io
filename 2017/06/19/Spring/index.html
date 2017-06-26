@@ -6,7 +6,7 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Spring | E</title>
+  <title>Spring-IOC、DI | E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Spring 的核心就是 IOC、DI 和 AOP
 IOC (Inversion Of Controller) 反转控制，简单来说就是由new关键字创建对象变成交由Spring容器来创建
@@ -14,7 +14,7 @@ DI (Dependency Inject) 依赖注入，简单来说就是拿到的对象，已经
 
 由一个例子来演示 IOC 和 DI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Spring">
+<meta property="og:title" content="Spring-IOC、DI">
 <meta property="og:url" content="//etuloser.com/2017/06/19/Spring/index.html">
 <meta property="og:site_name" content="E">
 <meta property="og:description" content="Spring 的核心就是 IOC、DI 和 AOP
@@ -23,9 +23,9 @@ DI (Dependency Inject) 依赖注入，简单来说就是拿到的对象，已经
 
 由一个例子来演示 IOC 和 DI">
 <meta property="og:image" content="http://i.imgur.com/HyFThdi.png">
-<meta property="og:updated_time" content="2017-06-19T08:32:15.233Z">
+<meta property="og:updated_time" content="2017-06-22T12:57:18.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Spring">
+<meta name="twitter:title" content="Spring-IOC、DI">
 <meta name="twitter:description" content="Spring 的核心就是 IOC、DI 和 AOP
 IOC (Inversion Of Controller) 反转控制，简单来说就是由new关键字创建对象变成交由Spring容器来创建
 DI (Dependency Inject) 依赖注入，简单来说就是拿到的对象，已经被注入好相关值了，直接使用即可
@@ -158,7 +158,7 @@ DI (Dependency Inject) 依赖注入，简单来说就是拿到的对象，已经
         
   
     <h1 class="article-title" itemprop="name">
-      Spring
+      Spring-IOC、DI
     </h1>
   
 
@@ -196,7 +196,7 @@ DI (Dependency Inject) 依赖注入，简单来说就是拿到的对象，已经
 <p><code>&lt;context:annotation-config/&gt;</code></p>
 <p>再使用 @Autowired 或者 @Resource 注解让类或者方法自动装载</p>
 <p>以上是对<strong>注入对象行为</strong>进行注解，那么 Bean 对象本身是否可以也通过注解而脱离xml配置文件进行呢？答案是可以的</p>
-<p><strong>在xml文件中申明开启包扫描</strong></p>
+<p><strong>在xml文件中声明开启包扫描</strong></p>
 <p><code>&lt;context:component-scan base-package=&quot;com.how2java.pojo&quot;/&gt;</code></p>
 <p>通过 <strong>@Component</strong> 注解声明此类是Bean</p>
 <p><code>@Component(&quot;Category&quot;)</code></p>
@@ -211,6 +211,17 @@ DI (Dependency Inject) 依赖注入，简单来说就是拿到的对象，已经
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -274,6 +285,15 @@ DI (Dependency Inject) 依赖注入，简单来说就是拿到的对象，已经
 
   
 <nav id="article-nav">
+  
+    <a href="/2017/06/19/ajax/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          ajax
+        
+      </div>
+    </a>
   
   
     <a href="/2017/06/19/Annotation/" id="article-nav-older" class="article-nav-link-wrap">
@@ -385,11 +405,15 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">J2SE</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -405,11 +429,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Sublime</a>
+                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Mybatis</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Sublime</a>
               </li>
              
               <li class="article-tag-list-item">

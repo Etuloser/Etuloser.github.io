@@ -6,14 +6,30 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="//etuloser.com">
-  <title>Tag: Sublime | E</title>
+  <title>Servlet | E</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="E">
-<meta property="og:url" content="//etuloser.com/tags/Sublime/index.html">
+  <meta name="description" content="####HttpServlet类
+
+如果要开发一个可以处理HTTP请求的Servlet程序，则肯定要继承HttpServlet类，而且在自定义的Servlet类中至少还要覆写HttpServlet类中提供的doGet()方法
+
+123protected void doGet(HttpServletRequest req,HttpServletResponse	resp)throws Servlet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Servlet">
+<meta property="og:url" content="//etuloser.com/2017/06/22/Servlet/index.html">
 <meta property="og:site_name" content="E">
+<meta property="og:description" content="####HttpServlet类
+
+如果要开发一个可以处理HTTP请求的Servlet程序，则肯定要继承HttpServlet类，而且在自定义的Servlet类中至少还要覆写HttpServlet类中提供的doGet()方法
+
+123protected void doGet(HttpServletRequest req,HttpServletResponse	resp)throws Servlet">
+<meta property="og:updated_time" content="2017-06-22T16:21:52.587Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="E">
+<meta name="twitter:title" content="Servlet">
+<meta name="twitter:description" content="####HttpServlet类
+
+如果要开发一个可以处理HTTP请求的Servlet程序，则肯定要继承HttpServlet类，而且在自定义的Servlet类中至少还要覆写HttpServlet类中提供的doGet()方法
+
+123protected void doGet(HttpServletRequest req,HttpServletResponse	resp)throws Servlet">
   
   
     <link rel="icon" href="/assets/blogImg/favicon.png">
@@ -133,60 +149,184 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Servlet" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/03/01/prettify/" class="archive-article-date">
-  	<time datetime="2017-03-01T04:57:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/01/prettify/">prettify</a>
+    <h1 class="article-title" itemprop="name">
+      Servlet
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2017/06/22/Servlet/" class="archive-article-date">
+  	<time datetime="2017-06-22T11:21:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>####HttpServlet类</p>
+<blockquote>
+<p>如果要开发一个可以处理HTTP请求的Servlet程序，则肯定要继承HttpServlet类，而且在自定义的Servlet类中至少还要覆写HttpServlet类中提供的doGet()方法</p>
+</blockquote>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">protected</span> <span class="keyword">void</span> doGet(HttpServletRequest req,HttpServletResponse</div><div class="line">	resp)<span class="keyword">throws</span> ServletException,IOException</div><div class="line"><span class="comment">//负责处理所有的get请求，2个参数分别用来接收和回应用户的请求</span></div></pre></td></tr></table></figure>
+<p><strong>web.xml的配置：</strong></p>
+<p>&lt;–!more–&gt;</p>
+<p>需要配置的有：</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="params">&lt;servlet&gt;</span></div><div class="line">	<span class="params">&lt;servlet-name&gt;</span><span class="params">&lt;/servlet-name&gt;</span></div><div class="line">    <span class="params">&lt;servlet-class&gt;</span>包.类<span class="params">&lt;/servlet-class&gt;</span></div><div class="line">    <span class="params">&lt;/servlet&gt;</span></div><div class="line"><span class="params">&lt;servlet-mapping&gt;</span></div><div class="line">	<span class="params">&lt;servlet-name&gt;</span><span class="params">&lt;/servlet-name&gt;</span></div><div class="line">    <span class="params">&lt;url-pattern&gt;</span>页面映射<span class="params">&lt;/url-pattern&gt;</span></div><div class="line"><span class="params">&lt;/servlet-mapping&gt;</span></div><div class="line">	<span class="comment">//这些写在web-app标签里，可以配置多个servlet-mapping</span></div></pre></td></tr></table></figure>
+<p><strong>路径加载执行的是get请求</strong></p>
+<p><strong>页面资源要放到web文件夹下</strong></p>
+<hr>
+<p>####Servlet生命周期</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> init() <span class="keyword">throws</span> ServletException</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> init(ServletConfig config) <span class="keyword">throws</span> ServletException</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> service(ServletRequest req,ServletResponse res) <span class="keyword">throws</span> ServletExcption,IOException</div><div class="line">	</div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> destroy()</div></pre></td></tr></table></figure>
+<p><strong>1.加载Servlet</strong></p>
+<blockquote>
+<p>Web容器负责加载Servlet，当Web容器启动是或者是在第一次使用这个Servlet时，容器会负责创建Servlet实例，但是用户必须通过部署描述符（web.xml）指定Servlet的位置（Servlet所在的包.类名称），成功加载后，Web容器会通过反射的方式对Servlet进行实例化</p>
+</blockquote>
+<p><strong>2.初始化</strong></p>
+<blockquote>
+<p>当一个Servlet被实例化以后，容器将调用init()方法初始化这个对象，初始化的目的是为了让Servlet对象在处理客户端请求前完成一些初始化的工作，如建立数据库连接、读取资源信息等，如果初始化失败，则此Servlet将直接被卸载</p>
+</blockquote>
+<p><strong>3.处理服务</strong></p>
+<blockquote>
+<p>当有请求提交时，Servlet将调用service()方法（常用的是doGet()或doPost()）进行处理。在service()方法中，Servlet可以通过ServletRequest接收客户的请求，也可以利用ServletResponse设置响应信息</p>
+</blockquote>
+<p><strong>4.销毁</strong></p>
+<blockquote>
+<p>当Web容器关闭或者检测到一个Servlet要从容器中被删除时，会自动调用destroy()方法，以便让该实例释放掉所占用的资源</p>
+</blockquote>
+<p><strong>5.卸载</strong></p>
+<blockquote>
+<p>当一个Servlet调用玩destroy()方法后，此实例将等待被垃圾收集器所回收，如果需要再次使用此Servlet时，会重新调用init()方法初始化</p>
+</blockquote>
+<hr>
+<p>####取得其他内置对象</p>
+<pre><code>public HttpSession getSession()
+
+public HttpSession getSession(boolean create)
+//返回当前的session,如果没有则创建一个新的session对象返回
+</code></pre><p><strong>ServletContext对象</strong></p>
+<pre><code>public ServletContext getServletContext()
+</code></pre><hr>
+<p>####Servlet跳转</p>
+<p><strong>服务器跳转：</strong></p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> forward(ServletRequest request,ServletResponse response)<span class="keyword">throws</span> ServletExcption,IOEXception</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="keyword">include</span>(ServletRequest request,ServletResponse response)<span class="keyword">throws</span> ServletExcption,IOEXception</div></pre></td></tr></table></figure>
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Sublime</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Servlet</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://etuloser.com/2017/06/22/Servlet/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2017/06/22/EL表达式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          EL表达式
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/06/22/SpringMVC/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringMVC</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+  
+  
   
 
-    
+  
+
+  
 
 
           </div>
@@ -209,9 +349,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
