@@ -22,7 +22,7 @@
 如果要开发一个可以处理HTTP请求的Servlet程序，则肯定要继承HttpServlet类，而且在自定义的Servlet类中至少还要覆写HttpServlet类中提供的doGet()方法
 
 123protected void doGet(HttpServletRequest req,HttpServletResponse	resp)throws Servlet">
-<meta property="og:updated_time" content="2017-06-22T16:21:52.587Z">
+<meta property="og:updated_time" content="2017-06-26T03:25:13.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Servlet">
 <meta name="twitter:description" content="####HttpServlet类
@@ -175,7 +175,7 @@
 </blockquote>
 <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">protected</span> <span class="keyword">void</span> doGet(HttpServletRequest req,HttpServletResponse</div><div class="line">	resp)<span class="keyword">throws</span> ServletException,IOException</div><div class="line"><span class="comment">//负责处理所有的get请求，2个参数分别用来接收和回应用户的请求</span></div></pre></td></tr></table></figure>
 <p><strong>web.xml的配置：</strong></p>
-<p>&lt;–!more–&gt;</p>
+<a id="more"></a>
 <p>需要配置的有：</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="params">&lt;servlet&gt;</span></div><div class="line">	<span class="params">&lt;servlet-name&gt;</span><span class="params">&lt;/servlet-name&gt;</span></div><div class="line">    <span class="params">&lt;servlet-class&gt;</span>包.类<span class="params">&lt;/servlet-class&gt;</span></div><div class="line">    <span class="params">&lt;/servlet&gt;</span></div><div class="line"><span class="params">&lt;servlet-mapping&gt;</span></div><div class="line">	<span class="params">&lt;servlet-name&gt;</span><span class="params">&lt;/servlet-name&gt;</span></div><div class="line">    <span class="params">&lt;url-pattern&gt;</span>页面映射<span class="params">&lt;/url-pattern&gt;</span></div><div class="line"><span class="params">&lt;/servlet-mapping&gt;</span></div><div class="line">	<span class="comment">//这些写在web-app标签里，可以配置多个servlet-mapping</span></div></pre></td></tr></table></figure>
 <p><strong>路径加载执行的是get请求</strong></p>
@@ -426,6 +426,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Mybatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
@@ -442,19 +450,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Mybatis</a>
+                <a href="javascript:void(0)" class="js-tag color3">Sublime</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Sublime</a>
               </li>
              
               <li class="article-tag-list-item">

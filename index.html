@@ -158,17 +158,9 @@
         <blockquote>
 <p>为了摆脱繁琐和枯燥的重复操作，减少代码重复率，mybatis是一个很好的选择</p>
 </blockquote>
-<ol>
-<li><p>创建实体类映射表</p>
- <figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Category</span> &#123;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</div><div class="line">    <span class="keyword">private</span> String name;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span>(<span class="params"><span class="keyword">int</span> id</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.id = id;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="keyword">return</span> name;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span>(<span class="params">String name</span>) </span>&#123;</div><div class="line">        <span class="keyword">this</span>.name = name;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-<li><p>配置mybatis-cfg.xml</p>
- <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="comment">&lt;!--包扫描--&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">typeAliases</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"pojo"</span>/&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">typeAliases</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">environments</span> <span class="attr">default</span>=<span class="string">"development"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">environment</span> <span class="attr">id</span>=<span class="string">"development"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">transactionManager</span> <span class="attr">type</span>=<span class="string">"JDBC"</span>/&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">"POOLED"</span>&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"driver"</span> <span class="attr">value</span>=<span class="string">"com.mysql.jdbc.Driver"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"url"</span> <span class="attr">value</span>=<span class="string">"jdbc:mysql://localhost:3306/how2java?characterEncoding=UTF-8"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">value</span>=<span class="string">"root"</span>/&gt;</span></div><div class="line">               <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"password"</span> <span class="attr">value</span>=<span class="string">"123456"</span>/&gt;</span></div><div class="line">           <span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">environment</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">environments</span>&gt;</span></div><div class="line"><span class="comment">&lt;!--映射Category.xml--&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">mappers</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">"pojo/Category.xml"</span>/&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>配置文件Category.xml</p>
- <figure class="highlight vbnet"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">&lt;mapper <span class="keyword">namespace</span>=<span class="string">"pojo"</span>&gt;</div><div class="line">   &lt;insert id=<span class="string">"addCategory"</span> parameterType=<span class="string">"Category"</span>&gt;</div><div class="line">       <span class="keyword">INTO</span> <span class="keyword">INTO</span> category_ (name) VALUE (<span class="meta">#&#123;name&#125;)</span></div><div class="line">   &lt;/insert&gt;</div><div class="line">   &lt;delete id=<span class="string">"delCategory"</span> parameterType=<span class="string">"Category"</span>&gt;</div><div class="line">       DELETE <span class="keyword">FROM</span> category_ <span class="keyword">WHERE</span> name = <span class="meta">#&#123;name&#125;</span></div><div class="line">   &lt;/delete&gt;</div><div class="line">   &lt;<span class="keyword">select</span> id=<span class="string">"getCategory"</span> parameterType=<span class="string">"_int"</span> resultType=<span class="string">"Category"</span>&gt;</div><div class="line">       <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> category_ <span class="keyword">WHERE</span> id = <span class="meta">#&#123;id&#125;</span></div><div class="line">   &lt;/<span class="keyword">select</span>&gt;</div><div class="line">   &lt;update id=<span class="string">"updateCategory"</span> parameterType=<span class="string">"Category"</span>&gt;</div><div class="line">       UPDATE category_ <span class="keyword">set</span> name = <span class="meta">#&#123;name&#125; WHERE id = #&#123;id&#125;</span></div><div class="line">   &lt;/update&gt;</div><div class="line">   &lt;<span class="keyword">select</span> id=<span class="string">"listCategory"</span> resultType=<span class="string">"Category"</span>&gt;</div><div class="line">       <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> category_</div><div class="line">   &lt;/<span class="keyword">select</span>&gt;</div><div class="line">&lt;/mapper&gt;</div></pre></td></tr></table></figure></li>
-</ol>
-
+        
+          <a class="article-more-a" href="/2017/06/24/Mybatis/#more">more >></a>
+        
       
 
       
@@ -230,33 +222,9 @@
 <p>E L（Expression Language） 目的：为了使 JSP 写起来更加简单。表达式语言的灵感来自于 ECMAScript 和 XPath 表达式语言，它提供了在 JSP 中简化表达式的方法，让Jsp的代码更加简化</p>
 </blockquote>
 <p>果然是从前端借鉴过来的。。。</p>
-<p>&lt;–!more–&gt;</p>
-<hr>
-<ol>
-<li><p>最好在 <a href="&#x6d;&#97;&#x69;&#108;&#116;&#x6f;&#58;&#x25;&#64;&#112;&#x61;&#x67;&#101;&#37;">&#x25;&#64;&#112;&#x61;&#x67;&#101;&#37;</a> 标签中加上 isELIgnored=”false”,以开启 Tomcat 对 EL 表达式的支持</p>
-</li>
-<li><p>作用域优先级</p>
-<p> <strong>pageContext&gt;request&gt;session&gt;application</strong></p>
-</li>
-<li><p>可以方便的访问 JavaBean 中的属性</p>
-<p> 如：${user.name}</p>
-</li>
-<li><p>结合JSTL的 <c:foeach> 使用，进一步简化代码</c:foeach></p>
- <figure class="highlight dust"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="xml"><span class="tag">&lt;<span class="name">c:forEach</span> <span class="attr">items</span>=<span class="string">"$</span></span></span><span class="template-variable">&#123;heros&#125;</span><span class="xml"><span class="tag"><span class="string">"</span> <span class="attr">var</span>=<span class="string">"hero"</span> <span class="attr">varStatus</span>=<span class="string">"st"</span>  &gt;</span></span></div><div class="line">   <span class="tag">&lt;<span class="name">tr</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">td</span>&gt;</span>$<span class="template-variable">&#123;st.count&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></div><div class="line">       <span class="tag">&lt;<span class="name">td</span>&gt;</span>$<span class="template-variable">&#123;hero&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span></div><div class="line">   <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">c:forEach</span>&gt;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>取参</p>
-<p> EL表达式还可以做到request.getParameter(“name”) 这样的形式获取浏览器传递过来的参数<br> 先把jstl.jsp代码改为如例所示，然后访问如下地址</p>
-<blockquote>
-<p><a href="http://127.0.0.1/jstl.jsp?name=abc" target="_blank" rel="external">http://127.0.0.1/jstl.jsp?name=abc</a></p>
-</blockquote>
-<p> &lt;%@ page language=”java” contentType=”text/html; charset=UTF-8”</p>
-<pre><code>pageEncoding=&quot;UTF-8&quot; import=&quot;java.util.*&quot; isELIgnored=&quot;false&quot;%&gt;
-</code></pre><p> ${param.name}</p>
-</li>
-<li><p>进行比较</p>
-</li>
-</ol>
-
+        
+          <a class="article-more-a" href="/2017/06/22/EL表达式/#more">more >></a>
+        
       
 
       
@@ -309,48 +277,9 @@
 </blockquote>
 <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">protected</span> <span class="keyword">void</span> doGet(HttpServletRequest req,HttpServletResponse</div><div class="line">	resp)<span class="keyword">throws</span> ServletException,IOException</div><div class="line"><span class="comment">//负责处理所有的get请求，2个参数分别用来接收和回应用户的请求</span></div></pre></td></tr></table></figure>
 <p><strong>web.xml的配置：</strong></p>
-<p>&lt;–!more–&gt;</p>
-<p>需要配置的有：</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="params">&lt;servlet&gt;</span></div><div class="line">	<span class="params">&lt;servlet-name&gt;</span><span class="params">&lt;/servlet-name&gt;</span></div><div class="line">    <span class="params">&lt;servlet-class&gt;</span>包.类<span class="params">&lt;/servlet-class&gt;</span></div><div class="line">    <span class="params">&lt;/servlet&gt;</span></div><div class="line"><span class="params">&lt;servlet-mapping&gt;</span></div><div class="line">	<span class="params">&lt;servlet-name&gt;</span><span class="params">&lt;/servlet-name&gt;</span></div><div class="line">    <span class="params">&lt;url-pattern&gt;</span>页面映射<span class="params">&lt;/url-pattern&gt;</span></div><div class="line"><span class="params">&lt;/servlet-mapping&gt;</span></div><div class="line">	<span class="comment">//这些写在web-app标签里，可以配置多个servlet-mapping</span></div></pre></td></tr></table></figure>
-<p><strong>路径加载执行的是get请求</strong></p>
-<p><strong>页面资源要放到web文件夹下</strong></p>
-<hr>
-<p>####Servlet生命周期</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> init() <span class="keyword">throws</span> ServletException</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> init(ServletConfig config) <span class="keyword">throws</span> ServletException</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> service(ServletRequest req,ServletResponse res) <span class="keyword">throws</span> ServletExcption,IOException</div><div class="line">	</div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> destroy()</div></pre></td></tr></table></figure>
-<p><strong>1.加载Servlet</strong></p>
-<blockquote>
-<p>Web容器负责加载Servlet，当Web容器启动是或者是在第一次使用这个Servlet时，容器会负责创建Servlet实例，但是用户必须通过部署描述符（web.xml）指定Servlet的位置（Servlet所在的包.类名称），成功加载后，Web容器会通过反射的方式对Servlet进行实例化</p>
-</blockquote>
-<p><strong>2.初始化</strong></p>
-<blockquote>
-<p>当一个Servlet被实例化以后，容器将调用init()方法初始化这个对象，初始化的目的是为了让Servlet对象在处理客户端请求前完成一些初始化的工作，如建立数据库连接、读取资源信息等，如果初始化失败，则此Servlet将直接被卸载</p>
-</blockquote>
-<p><strong>3.处理服务</strong></p>
-<blockquote>
-<p>当有请求提交时，Servlet将调用service()方法（常用的是doGet()或doPost()）进行处理。在service()方法中，Servlet可以通过ServletRequest接收客户的请求，也可以利用ServletResponse设置响应信息</p>
-</blockquote>
-<p><strong>4.销毁</strong></p>
-<blockquote>
-<p>当Web容器关闭或者检测到一个Servlet要从容器中被删除时，会自动调用destroy()方法，以便让该实例释放掉所占用的资源</p>
-</blockquote>
-<p><strong>5.卸载</strong></p>
-<blockquote>
-<p>当一个Servlet调用玩destroy()方法后，此实例将等待被垃圾收集器所回收，如果需要再次使用此Servlet时，会重新调用init()方法初始化</p>
-</blockquote>
-<hr>
-<p>####取得其他内置对象</p>
-<pre><code>public HttpSession getSession()
-
-public HttpSession getSession(boolean create)
-//返回当前的session,如果没有则创建一个新的session对象返回
-</code></pre><p><strong>ServletContext对象</strong></p>
-<pre><code>public ServletContext getServletContext()
-</code></pre><hr>
-<p>####Servlet跳转</p>
-<p><strong>服务器跳转：</strong></p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> forward(ServletRequest request,ServletResponse response)<span class="keyword">throws</span> ServletExcption,IOEXception</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="keyword">include</span>(ServletRequest request,ServletResponse response)<span class="keyword">throws</span> ServletExcption,IOEXception</div></pre></td></tr></table></figure>
-<hr>
-
+        
+          <a class="article-more-a" href="/2017/06/22/Servlet/#more">more >></a>
+        
       
 
       
@@ -413,86 +342,9 @@ public HttpSession getSession(boolean create)
 <p>在 IDEA 中导入项目后，需要手动添加 Tomcat 服务器，并且添加 artifacts，这个具体是什么我暂时不知道，留着以后探究，猜测应该是服务器 lib 依赖，这里只说如何做</p>
 </blockquote>
 <p><img src="http://i.imgur.com/rZMPbis.png" alt=""></p>
-<p>&lt;–!more–&gt;</p>
-<hr>
-<p><strong>1.在建立好项目，添加好 jar 包依赖后，开始配置 web.xml</strong></p>
-<p>配置 SpringMVC 的入口 DispatcherServlet</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">servlet</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springmvc<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>org.springframework.web.servlet.DispatcherServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">load-on-startup</span>&gt;</span>1<span class="tag">&lt;/<span class="name">load-on-startup</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>springmvc<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><strong>2.配置 Spring-servlet.xml, 这是 Spring MVC 的映射配置文件</strong></p>
-<p>表示访问 /index 路径会交由 id=indexController 的bean处理</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;bean <span class="built_in">id</span>=<span class="string">"simpleUrlHandlerMapping"</span> <span class="built_in">class</span>=<span class="string">"org.springframework.web.servlet.handler.SimpleUrlHandlerMapping"</span>&gt;</div><div class="line">	&lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"mappings"</span>&gt;</div><div class="line">		&lt;props&gt;</div><div class="line">			&lt;<span class="keyword">prop</span> key=<span class="string">"/index"</span>&gt;indexController&lt;/<span class="keyword">prop</span>&gt;</div><div class="line">		/props&gt;</div><div class="line">	&lt;/<span class="keyword">property</span>&gt;</div><div class="line">&lt;/bean&gt;</div><div class="line"></div><div class="line">&lt;bean <span class="built_in">id</span>=<span class="string">"indexController"</span> <span class="built_in">class</span>=<span class="string">"controller.IndexController"</span>&gt;&lt;/bean&gt;</div></pre></td></tr></table></figure>
-<p><strong>3.然后声明控制类 IndexController</strong></p>
-<p>控制类 IndexController实现接口 Controller，提供方法 handleRequest 处理请求</p>
-<p>SpringMVC 通过 ModelAndView 对象把模型和视图结合在一起</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IndexController</span> <span class="keyword">implements</span> <span class="title">Controller</span> </span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> ModelAndView <span class="title">handleRequest</span><span class="params">(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView(<span class="string">"index.jsp"</span>);</div><div class="line">        modelAndView.addObject(<span class="string">"message"</span>,<span class="string">"Hello Spring MVC"</span>);</div><div class="line">        <span class="keyword">return</span>  modelAndView;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<hr>
-<p><img src="http://i.imgur.com/On11dyk.png" alt=""></p>
-<hr>
-<p><strong>视图定位</strong></p>
-<ol>
-<li><p>通过修改 sprinmvc-servlet.xml 来实现视图定位</p>
- <figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;bean <span class="built_in">id</span>=<span class="string">"viewResolver"</span> <span class="built_in">class</span>=<span class="string">"org.springframework.web.servlet.view.InternalResourceViewResolver"</span>&gt;</div><div class="line">   &lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"prefix"</span> value=<span class="string">"/WEB-INF/page/"</span> /&gt;</div><div class="line">   &lt;<span class="keyword">property</span> <span class="built_in">name</span>=<span class="string">"suffix"</span> value=<span class="string">".jsp"</span> /&gt;</div><div class="line">&lt;/bean&gt;</div></pre></td></tr></table></figure>
-</li>
-<li><p>修改 IndexController 类</p>
-<p> <code>ModelAndView mav = new ModelAndView(&quot;index&quot;);</code></p>
-</li>
-</ol>
-<p>为什么要这样做？</p>
-<p>如果写死路径不利于维护修改</p>
-<hr>
-<p><strong>注解方式</strong></p>
-<p>同样 springmvc 也可以用注解来实现</p>
-<ol>
-<li><p>声明 IndexController 是控制类,同时不再让IndexController实现Controller类</p>
- <figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@<span class="type">Controller</span></div><div class="line">public class <span class="type">IndexController</span><span class="meta">&#123;...&#125;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>声明 handleRequest 方法是 RequestMapping 同时加上参数,表示路径/index会映射到该方法上</p>
- <figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">@<span class="type">RequestMapping</span>(<span class="string">"/index"</span>)</div><div class="line">public <span class="type">ModelAndView</span> handleRequest(<span class="type">HttpServletRequest</span> request, <span class="type">HttpServletResponse</span> response)<span class="meta">&#123;...&#125;</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>在配置文件里添加头文件标签约束并开启包扫描</p>
-<p> <em>头文件参考spring笔记</em></p>
-<p> <context:annotation-config></context:annotation-config></p>
- <context:component-scan base-package="controller">
-
-</context:component-scan></li>
-</ol>
-<hr>
-<p><strong>接受表单数据</strong></p>
-<blockquote>
-<p>浏览器提交数据是非常常见的场景，本例演示用户提交产品名称和价格到Spring MVC Spring MVC如何接受数据</p>
-</blockquote>
-<ol>
-<li><p>个人喜欢从页面做起，先写一个提交数据的页面 addProduct.jsp</p>
-  <figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;<span class="keyword">form</span> action=<span class="string">"/addProduct"</span>&gt;</div><div class="line">       产品名称：&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"text"</span> name=<span class="string">"name"</span> value=<span class="string">""</span>&gt;&lt;<span class="keyword">br</span>/&gt;</div><div class="line">       产品价格：&lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"text"</span> name=<span class="string">"price"</span> value=<span class="string">""</span>&gt;&lt;<span class="keyword">br</span>/&gt;</div><div class="line">       &lt;<span class="keyword">input</span> <span class="keyword">type</span>=<span class="string">"submit"</span> value=<span class="string">"增加商品"</span>&gt;</div><div class="line">   &lt;/<span class="keyword">form</span>&gt;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<pre><code>该jsp页面会把数据传到 /addProduct 下
-</code></pre><ol>
-<li><p>声明 ProductController 控制器来处理 JSP 传过来的数据</p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@Controller</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProductController</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/addProduct"</span>)</div><div class="line">    <span class="function"><span class="keyword">public</span> ModelAndView <span class="title">add</span><span class="params">(Product product)</span><span class="keyword">throws</span> Exception</span>&#123;</div><div class="line">        ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView(<span class="string">"showProduct"</span>);</div><div class="line">        <span class="keyword">return</span> modelAndView;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<pre><code>add 方法接受了 jsp 传过来的参数并把它们注入到了 product 对象里，并通过此对象生成了 showProduct 页面，相当于
-
-modelAndView.addObject(&quot;product&quot;,product);
-</code></pre><ol>
-<li><p>写 showProduct.jsp 页面来显示结果，用EL表达式</p>
-<p> 产品名称： ${product.name}<br><br> 产品价格： ${product.price}</p>
-</li>
-</ol>
-<hr>
-<p><strong>客户端跳转</strong></p>
-<pre><code><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/jump"</span>)</div><div class="line"><span class="keyword">public</span> <span class="function">ModelAndView <span class="title">jump</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">    ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView(<span class="string">"redirect:/index"</span>);</div><div class="line">    <span class="keyword">return</span> modelAndView;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</code></pre><p>显然，通过 <strong>redirect:</strong> 即可完成客户端跳转</p>
-<hr>
-<p><strong>刷session</strong></p>
-<pre><code><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="meta">@RequestMapping</span>(<span class="string">"check"</span>)</div><div class="line">   <span class="keyword">public</span> <span class="function">ModelAndView <span class="title">check</span><span class="params">(HttpSession session)</span> </span>&#123;</div><div class="line">       Integer i = (Integer) session.getAttribute(<span class="string">"count"</span>);</div><div class="line">       <span class="keyword">if</span> (i == <span class="keyword">null</span>) &#123;</div><div class="line">           i = <span class="number">0</span>;</div><div class="line">       &#125;</div><div class="line">       i++;</div><div class="line">       session.setAttribute(<span class="string">"count"</span>, i);</div><div class="line">       ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView(<span class="string">"check"</span>);</div><div class="line">       <span class="keyword">return</span> modelAndView;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
-</code></pre><hr>
-<p><strong>filter</strong></p>
-<pre><code><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">filter</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">filter-class</span>&gt;</span>org.springframework.web.filter.CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-class</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">init-param</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>encoding<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>utf-8<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">init-param</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">filter</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">filter-mapping</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">filter-name</span>&gt;</span>CharacterEncodingFilter<span class="tag">&lt;/<span class="name">filter-name</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/*<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">filter-mapping</span>&gt;</span></div></pre></td></tr></table></figure>
-</code></pre><hr>
-<p><strong>上传文件</strong></p>
-<figure class="highlight haxe"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">@Controller</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UploadController</span> </span>&#123;</div><div class="line"></div><div class="line">    @RequestMapping(<span class="string">"/uploadImage"</span>)</div><div class="line">    <span class="keyword">public</span> ModelAndView upload(HttpServletRequest request, HttpServletResponse response, UploadedImageFile file) throws IOException &#123;</div><div class="line"></div><div class="line">        <span class="keyword">String</span> name = RandomStringUtils.randomAlphanumeric(<span class="number">10</span>);</div><div class="line">        <span class="keyword">String</span> <span class="keyword">new</span><span class="type">FileName</span> = name + <span class="string">".jpg"</span>;</div><div class="line">        File <span class="keyword">new</span><span class="type">File</span> = <span class="keyword">new</span> <span class="type">File</span>(request.getServletContext().getRealPath(<span class="string">"/image"</span>),<span class="keyword">new</span><span class="type">FileName</span>);</div><div class="line">        <span class="keyword">new</span><span class="type">File</span>.getParentFile().mkdir();</div><div class="line">        file.getImage().transferTo(<span class="keyword">new</span><span class="type">File</span>);</div><div class="line"></div><div class="line">        ModelAndView modelAndView = <span class="keyword">new</span> <span class="type">ModelAndView</span>(<span class="string">"showUploadedFile"</span>);</div><div class="line">        modelAndView.addObject(<span class="string">"imageName"</span>,<span class="keyword">new</span><span class="type">FileName</span>);</div><div class="line">        <span class="keyword">return</span> modelAndView;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/06/22/SpringMVC/#more">more >></a>
+        
       
 
       
@@ -663,20 +515,9 @@ modelAndView.addObject(&quot;product&quot;,product);
 <p>java.lang.annotation.Annotation 是 Annotation 的接口，只要是Annotat都必须实现此接口</p>
 </blockquote>
 <figure class="highlight monkey"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Annotation</span> &#123;</span></div><div class="line">	</div><div class="line">	<span class="keyword">public</span> <span class="class"><span class="keyword">Class</span>&lt;? <span class="keyword">extends</span> <span class="title">Annotataion</span>&gt; <span class="title">annotationType</span>();</span></div><div class="line">	<span class="keyword">public</span> boolean equals(Object obj);</div><div class="line">	String toString();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>&lt;–!more–&gt;</p>
-<p><strong>@Override</strong></p>
-<blockquote>
-<p>保证方法正确覆写</p>
-</blockquote>
-<p><strong>Deprecated</strong></p>
-<blockquote>
-<p>声明一个不建议使用的方法</p>
-</blockquote>
-<hr>
-<p>####自定义Annotation</p>
-<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">[<span class="keyword">public</span>] @<span class="class"><span class="keyword">interface</span> <span class="title">Annotation</span>名称 </span>&#123;</div><div class="line"></div><div class="line">	数据类型 变量名称()</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>使用@interface就相当于继承了Annotation接口</strong></p>
-
+        
+          <a class="article-more-a" href="/2017/06/19/Annotation/#more">more >></a>
+        
       
 
       
@@ -784,30 +625,9 @@ modelAndView.addObject(&quot;product&quot;,product);
 <p>向下转型：子类 子类对象 = (子类)父类实例//即要强转类型</p>
 </blockquote>
 <p>示例：</p>
-<p>定义父类Father</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Father</span> &#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        System.<span class="keyword">out</span>.println(<span class="string">"我是父类的say方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>定义子类Son1</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Son1</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;</div><div class="line"></div><div class="line">    public void say() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son1类的say方法"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void tell() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son1类的tell方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>定义子类Son2</p>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Son2</span> <span class="keyword">extends</span> <span class="title">Father</span> </span>&#123;</div><div class="line"></div><div class="line">    public void say() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son2类的say方法"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public void tell() &#123;</div><div class="line">        <span class="type">System</span>.out.println(<span class="string">"我是Son2类的tell方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>向上转型</p>
-<figure class="highlight pony"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="type">Father</span> father = <span class="function"><span class="keyword">new</span> <span class="title">Son1</span>();</span></div><div class="line"><span class="title">father</span>.<span class="title">say</span>()<span class="comment">//此处调用的是子类覆写过的say方法</span></div><div class="line"><span class="title">father</span>.<span class="title">tell</span>()<span class="comment">//报错，因为父类中没有tell方法</span></div></pre></td></tr></table></figure>
-<p><em>发生向上转型后，调用的一定是子类中的被覆写的方法</em></p>
-<p>向下转型</p>
-<figure class="highlight pony"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="type">Father</span> father = <span class="function"><span class="keyword">new</span> <span class="title">Son1</span>()；</span></div><div class="line"><span class="title">Son1</span> <span class="title">son</span> = (<span class="type">Son1</span>)<span class="title">father</span>;</div><div class="line"><span class="title">son</span>.<span class="title">say</span>();</div><div class="line"><span class="title">son</span>.<span class="title">tell</span>();<span class="comment">//均可使用</span></div></pre></td></tr></table></figure>
-<p><em>值得注意的是，要向使用向下转型，必须先向上转型让子类与父类建立联系，否则会出现ClassCastException错误</em></p>
-<hr>
-<p>应用场景：设计一个方法，要求此方法可以接受Father类的子类并调用相应放方法</p>
-<figure class="highlight crystal"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public void <span class="function"><span class="keyword">fun</span>(<span class="title">Father</span></span> father)&#123;</div><div class="line">	father.say();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>如果不使用向上转型，则需要给每个子类添加一个对应的fun(子类 参数名)方法，这显然不合理。</p>
-<hr>
-<p>#instanceof 关键字</p>
-<blockquote>
-<p>用来判断一个对象到底是哪个类的实例</p>
-</blockquote>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Father father = <span class="keyword">new</span> Son1();</div><div class="line">System.out.<span class="keyword">println</span>(father <span class="keyword">instanceof</span> Father);<span class="comment">//t</span></div><div class="line">System.out.<span class="keyword">println</span>(father <span class="keyword">instanceof</span> Son1);<span class="comment">//t</span></div><div class="line">System.out.<span class="keyword">println</span>(father <span class="keyword">instanceof</span> Son2);<span class="comment">//f</span></div></pre></td></tr></table></figure>
-<p>在进行对象向下转型关系前最好先进行判断再进行相应的转型操作</p>
-
+        
+          <a class="article-more-a" href="/2017/06/19/对象的多态性/#more">more >></a>
+        
       
 
       
@@ -855,14 +675,9 @@ modelAndView.addObject(&quot;product&quot;,product);
     <div class="article-entry" itemprop="articleBody">
       
         <p>在日常的Java项目开发中，entity（实体类）是必不可少的，它们一般都有很多的属性，并有相应的setter和getter方法。entity（实体类）的作用一般是和数据表做映射。所以快速写出规范的entity（实体类）是java开发中一项必不可少的技能。</p>
-<p>在项目中写实体类一般遵循下面的规范：</p>
-<p>1、根据你的设计，定义一组你需要的私有属性。</p>
-<p>2、根据这些属性，创建它们的setter和getter方法。（eclipse等集成开发软件可以自动生成。具体怎么生成？请自行百度。）</p>
-<p>3、提供带参数的构造器和无参数的构造器。</p>
-<p>4、重写父类中的eauals()方法和hashcode()方法。（如果需要涉及到两个对象之间的比较，这两个功能很重要。）</p>
-<p>5、实现序列化并赋予其一个版本号。</p>
-<p>下面是我写的一个实体类（entity）例子：具体的细节都用注释标注了。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"> <span class="number">1</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123;</div><div class="line"> <span class="number">2</span>     <span class="comment">/**</span></div><div class="line"> 3      * 版本号</div><div class="line"> 4      */</div><div class="line"> <span class="number">5</span>     <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;</div><div class="line"> <span class="number">6</span>     <span class="comment">//定义的私有属性</span></div><div class="line"> <span class="number">7</span>     <span class="keyword">private</span> <span class="keyword">int</span> id;</div><div class="line"> <span class="number">8</span>     <span class="keyword">private</span> String name;</div><div class="line"> <span class="number">9</span>     <span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line"><span class="number">10</span>     <span class="keyword">private</span> <span class="keyword">double</span> score;</div><div class="line"><span class="number">11</span>     <span class="comment">//无参数的构造器</span></div><div class="line"><span class="number">12</span>     <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;</div><div class="line"><span class="number">13</span>         </div><div class="line"><span class="number">14</span>     &#125;</div><div class="line"><span class="number">15</span>     <span class="comment">//有参数的构造器</span></div><div class="line"><span class="number">16</span>     <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(<span class="keyword">int</span> id,String name,<span class="keyword">int</span> age, <span class="keyword">double</span> score)</span></span>&#123;</div><div class="line"><span class="number">17</span>         <span class="keyword">this</span>.id = id;</div><div class="line"><span class="number">18</span>         <span class="keyword">this</span>.name = name;</div><div class="line"><span class="number">19</span>         <span class="keyword">this</span>.age = age;</div><div class="line"><span class="number">20</span>         <span class="keyword">this</span>.score = score;</div><div class="line"><span class="number">21</span>     &#125;</div><div class="line"><span class="number">22</span>     <span class="comment">//创建的setter和getter方法</span></div><div class="line"><span class="number">23</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">24</span>         <span class="keyword">return</span> id;</div><div class="line"><span class="number">25</span>     &#125;</div><div class="line"><span class="number">26</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setId</span><span class="params">(<span class="keyword">int</span> id)</span> </span>&#123;</div><div class="line"><span class="number">27</span>         <span class="keyword">this</span>.id = id;</div><div class="line"><span class="number">28</span>     &#125;</div><div class="line"><span class="number">29</span>     <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">30</span>         <span class="keyword">return</span> name;</div><div class="line"><span class="number">31</span>     &#125;</div><div class="line"><span class="number">32</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line"><span class="number">33</span>         <span class="keyword">this</span>.name = name;</div><div class="line"><span class="number">34</span>     &#125;</div><div class="line"><span class="number">35</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">36</span>         <span class="keyword">return</span> age;</div><div class="line"><span class="number">37</span>     &#125;</div><div class="line"><span class="number">38</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line"><span class="number">39</span>         <span class="keyword">this</span>.age = age;</div><div class="line"><span class="number">40</span>     &#125;</div><div class="line"><span class="number">41</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getScore</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">42</span>         <span class="keyword">return</span> score;</div><div class="line"><span class="number">43</span>     &#125;</div><div class="line"><span class="number">44</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setScore</span><span class="params">(<span class="keyword">double</span> score)</span> </span>&#123;</div><div class="line"><span class="number">45</span>         <span class="keyword">this</span>.score = score;</div><div class="line"><span class="number">46</span>     &#125;</div><div class="line"><span class="number">47</span>     <span class="comment">//由于id对于学生这个类是唯一可以标识的，所以重写了父类中的id的hashCode()和equals()方法。</span></div><div class="line"><span class="number">48</span>     <span class="meta">@Override</span></div><div class="line"><span class="number">49</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="number">50</span>         <span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;</div><div class="line"><span class="number">51</span>         <span class="keyword">int</span> result = <span class="number">1</span>;</div><div class="line"><span class="number">52</span>         result = prime * result + id;</div><div class="line"><span class="number">53</span>         <span class="keyword">return</span> result;</div><div class="line"><span class="number">54</span>     &#125;</div><div class="line"><span class="number">55</span>     <span class="meta">@Override</span></div><div class="line"><span class="number">56</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object obj)</span> </span>&#123;</div><div class="line"><span class="number">57</span>         <span class="keyword">if</span> (<span class="keyword">this</span> == obj)</div><div class="line"><span class="number">58</span>             <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"><span class="number">59</span>         <span class="keyword">if</span> (obj == <span class="keyword">null</span>)</div><div class="line"><span class="number">60</span>             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"><span class="number">61</span>         <span class="keyword">if</span> (getClass() != obj.getClass())</div><div class="line"><span class="number">62</span>             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"><span class="number">63</span>         Student other = (Student) obj;</div><div class="line"><span class="number">64</span>         <span class="keyword">if</span> (id != other.id)</div><div class="line"><span class="number">65</span>             <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line"><span class="number">66</span>         <span class="keyword">return</span> <span class="keyword">true</span>;</div><div class="line"><span class="number">67</span>     &#125;</div><div class="line"><span class="number">68</span>     </div><div class="line"><span class="number">69</span> &#125;</div><div class="line">一个学生的Java实体类就基本完成了。</div></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2017/06/19/entity/#more">more >></a>
+        
       
 
       
@@ -993,6 +808,14 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Mybatis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
@@ -1009,19 +832,11 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Servlet</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Mybatis</a>
+                <a href="javascript:void(0)" class="js-tag color3">Sublime</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Sublime</a>
               </li>
              
               <li class="article-tag-list-item">
